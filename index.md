@@ -1,6 +1,5 @@
-## dg1an3's Stuff
+## Interesting Projects
 
-Here are the interesting projects I have worked upon.
 - Hiearchical Filter Bank
 - theWheel
 - pheonixrt
