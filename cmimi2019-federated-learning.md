@@ -1,4 +1,4 @@
-##Federated learning pt I
+## Federated learning pt I
 One of the recurring themes at CMIMI were attempts at implemented federated or distributed learning.  The motivation was simple: need lots of data, but HIPAA.  Therefore let’s learn without giving up data.  Round robin | Gradient contrib
 Free market mechanism...
 * with hyperfederated learning
