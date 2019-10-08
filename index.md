@@ -16,3 +16,4 @@
 
 ## Other Posts
 - LC-VAE and the generalized shifter
+- Mutation testing
