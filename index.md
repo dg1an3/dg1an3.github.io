@@ -17,3 +17,4 @@
 ## Other Posts
 - LC-VAE and the generalized shifter
 - Mutation testing
+- RT physician intent
