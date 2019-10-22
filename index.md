@@ -18,3 +18,8 @@
 - LC-VAE and the generalized shifter
 - Mutation testing
 - RT physician intent
+
+* ipfs//gnarls
+* srodecoder
+* blogger rubbernecking
+* linked in image quality
