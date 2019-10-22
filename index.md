@@ -23,5 +23,5 @@
 * srodecoder
 * blogger rubbernecking
 * linked in image quality
-* https://ipfs.io/ipfs/QmRquDPmBHWur4kPBKPCMRxBJY16HeqPwq3jggvrVKZsDr
+* [https://ipfs.io/ipfs/QmRquDPmBHWur4kPBKPCMRxBJY16HeqPwq3jggvrVKZsDr]
 
