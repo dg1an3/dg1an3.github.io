@@ -1,4 +1,5 @@
 Radiotherapy Image Review Worklist Triage
+-----------------
 At C-MIMI in Austin this year, one of the talks that caught my attention was on a system called DeepCAT, which is a worklist triage system for mammogram screening.  It used deep learning to prioritize mammograms, as well as filtering out low risk images.
 
 It seems that a similar approach would benefit RT image review.  Experience with Mosaiq image review users indicates a benefit from anything that can streamline the workflow.  A triage model would predict:
