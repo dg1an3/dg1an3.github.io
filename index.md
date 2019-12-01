@@ -9,7 +9,7 @@
 
 ## Posts about C-MIMI 2019
 - [DeepCAT](https://dg1an3.github.com/cmimi2019-worklist-triage)
-- [Federated learning]()|[pt 2]()|[pt 3]()
+- [Federated learning]() - [pt 2]() - [pt 3]()
 - [Explainable AI](https://dg1an3.github.com/cmimi2019-explainable-AI)
 - DeepNeuro
 
