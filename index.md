@@ -12,7 +12,7 @@
 - [Federated learning pt 1]
 - Federated learning pt 2
 - Federated learning pt 3
-- [Explainable AI]()
+- [Explainable AI](https://dg1an3.github.com/cmimi2019-explainable-ai)
 - DeepNeuro
 
 ## Other Posts
