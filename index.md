@@ -1,5 +1,6 @@
 ## Interesting Projects
 - [zebrastack](https://github.com/dg1an3/zebrastack)
+- [SRODecoderRing](https://github.com/dg1an3/SRODecoderRing)
 - theWheel
 - [pheonixrt](https://github.com/dg1an3/pheonixrt/blob/master/README.md)
 - lambdaDicom
@@ -19,7 +20,6 @@
 - RT physician intent
 
 * ipfs//gnarls
-* srodecoder
 * blogger rubbernecking
 * linked in image quality
 * [https://ipfs.io/ipfs/QmRquDPmBHWur4kPBKPCMRxBJY16HeqPwq3jggvrVKZsDr](https://ipfs.io/ipfs/QmRquDPmBHWur4kPBKPCMRxBJY16HeqPwq3jggvrVKZsDr)
