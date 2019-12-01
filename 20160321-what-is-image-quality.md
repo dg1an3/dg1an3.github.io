@@ -1,3 +1,5 @@
+What Is Image Quality
+--------------
 I saw a talk at AAPM 2015 by Kyle Myers (from the FDA's Office of Science and Engineering Laboratories) about the Channelized Hotelling Observer (Barrett et al 1993), which is a parametric model of visual performance based on spatial frequency selective channels in areas V1 and V2.
 
 She was discussing the use of the CHO model for selecting optimal CBCT reconstruction parameters, but I ran across an obvious application of the technique to the problem of JPEG 2000 parameter selection (Zhang et al 2004). 
