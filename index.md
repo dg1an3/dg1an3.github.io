@@ -9,9 +9,9 @@
 - ALGT
 
 ## Posts about C-MIMI 2019
-- [DeepCAT](https://dg1an3.github.com/cmimi2019-worklist-triage)
+- [DeepCAT](https://dg1an3.github.io/cmimi2019-worklist-triage)
 - [Federated learning]() - [pt 2]() - [pt 3]()
-- [Explainable AI](https://dg1an3.github.com/cmimi2019-explainable-AI)
+- [Explainable AI](https://dg1an3.github.io/cmimi2019-explainable-AI)
 - DeepNeuro
 
 ## Other Posts
