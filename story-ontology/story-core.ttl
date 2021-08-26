@@ -56,11 +56,11 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://dg1an3.github.io/story-ontology/story-core#has_character
+###  http://lillydog.net/ontologies/story-core#has_character
 :has_character rdf:type owl:ObjectProperty .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#made
+###  http://lillydog.net/ontologies/story-core#made
 :made rdf:type owl:ObjectProperty ;
       rdfs:subPropertyOf owl:topObjectProperty .
 
@@ -74,7 +74,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                           rdfs:subPropertyOf owl:topObjectProperty ;
                                                                                           owl:inverseOf <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#is_depicted_by> ;
                                                                                           rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000030> ;
-                                                                                          rdfs:range <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Event> .
+                                                                                          rdfs:range :Event .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#has_character
@@ -84,7 +84,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#is_character_in
 <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#is_character_in> rdf:type owl:ObjectProperty ;
-                                                                                            rdfs:domain <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#FictionalCharacter> ;
+                                                                                            rdfs:domain :FictionalCharacter ;
                                                                                             rdfs:range <http://purl.obolibrary.org/obo/IAO_0000310> .
 
 
@@ -110,9 +110,10 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://dg1an3.github.io/story-ontology/story-core#Agent
-:Agent rdf:type owl:Class ;
-       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> .
+###  http://dg1an3.github.io/story-ontology/story-core#Adversarial_Event
+:Adversarial_Event rdf:type owl:Class ;
+                   rdfs:subClassOf :Event ;
+                   rdfs:comment "event where the participants have conflicting desired outcomes" .
 
 
 ###  http://dg1an3.github.io/story-ontology/story-core#Animal
@@ -132,15 +133,37 @@ xsd:date rdf:type rdfs:Datatype .
                         ] .
 
 
+###  http://dg1an3.github.io/story-ontology/story-core#Battle
+:Battle rdf:type owl:Class ;
+        rdfs:subClassOf :Adversarial_Event .
+
+
+###  http://dg1an3.github.io/story-ontology/story-core#Birth
+:Birth rdf:type owl:Class ;
+       rdfs:subClassOf :Life_Event .
+
+
 ###  http://dg1an3.github.io/story-ontology/story-core#Chapter
 :Chapter rdf:type owl:Class ;
          rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
 
 
+###  http://dg1an3.github.io/story-ontology/story-core#Death
+:Death rdf:type owl:Class ;
+       rdfs:subClassOf :Life_Event .
+
+
+###  http://dg1an3.github.io/story-ontology/story-core#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> .
+
+
 ###  http://dg1an3.github.io/story-ontology/story-core#FictionalCharacter
 :FictionalCharacter rdf:type owl:Class ;
                     rdfs:subClassOf :Agent ,
-                                    <http://purl.obolibrary.org/obo/BFO_0000031> .
+                                    <http://purl.obolibrary.org/obo/BFO_0000031> ,
+                                    <http://xmlns.com/foaf/0.1/Agent> ;
+                    rdfs:comment "TODO: is this now different from a Person?" .
 
 
 ###  http://dg1an3.github.io/story-ontology/story-core#FictionalWork
@@ -148,14 +171,19 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310> .
 
 
+###  http://dg1an3.github.io/story-ontology/story-core#Fight
+:Fight rdf:type owl:Class ;
+       rdfs:subClassOf :Adversarial_Event .
+
+
 ###  http://dg1an3.github.io/story-ontology/story-core#FoodStuff
 :FoodStuff rdf:type owl:Class ;
            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Goal
-:Goal rdf:type owl:Class ;
-      rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000005> .
+###  http://dg1an3.github.io/story-ontology/story-core#Game
+:Game rdf:type owl:Class ;
+      rdfs:subClassOf :Adversarial_Event .
 
 
 ###  http://dg1an3.github.io/story-ontology/story-core#Group
@@ -164,19 +192,34 @@ xsd:date rdf:type rdfs:Datatype .
                        <http://purl.obolibrary.org/obo/BFO_0000027> .
 
 
+###  http://dg1an3.github.io/story-ontology/story-core#Illness
+:Illness rdf:type owl:Class ;
+         rdfs:subClassOf :Life_Event .
+
+
+###  http://dg1an3.github.io/story-ontology/story-core#JourneyOrTrip
+:JourneyOrTrip rdf:type owl:Class ;
+               rdfs:subClassOf :Event .
+
+
+###  http://dg1an3.github.io/story-ontology/story-core#Life_Event
+:Life_Event rdf:type owl:Class ;
+            rdfs:subClassOf :Event .
+
+
 ###  http://dg1an3.github.io/story-ontology/story-core#ManufacturedObject
 :ManufacturedObject rdf:type owl:Class ;
                     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
 
 
+###  http://dg1an3.github.io/story-ontology/story-core#MilitaryOrganization
+:MilitaryOrganization rdf:type owl:Class ;
+                      rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> .
+
+
 ###  http://dg1an3.github.io/story-ontology/story-core#Novel
 :Novel rdf:type owl:Class ;
        rdfs:subClassOf :FictionalWork .
-
-
-###  http://dg1an3.github.io/story-ontology/story-core#OathOrPromise
-:OathOrPromise rdf:type owl:Class ;
-               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000001> .
 
 
 ###  http://dg1an3.github.io/story-ontology/story-core#Organism
@@ -192,8 +235,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://dg1an3.github.io/story-ontology/story-core#Person
 :Person rdf:type owl:Class ;
-        rdfs:subClassOf :Agent ,
-                        :Animal .
+        rdfs:subClassOf :Animal ,
+                        :Agent .
 
 
 ###  http://dg1an3.github.io/story-ontology/story-core#Plant
@@ -204,6 +247,36 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://dg1an3.github.io/story-ontology/story-core#Play
 :Play rdf:type owl:Class ;
       rdfs:subClassOf :FictionalWork .
+
+
+###  http://dg1an3.github.io/story-ontology/story-core#Trial
+:Trial rdf:type owl:Class ;
+       rdfs:subClassOf :Adversarial_Event .
+
+
+###  http://dg1an3.github.io/story-ontology/story-core#Weapon
+:Weapon rdf:type owl:Class ;
+        rdfs:subClassOf :ManufacturedObject .
+
+
+###  http://dg1an3.github.io/story-ontology/story-core#Work
+:Work rdf:type owl:Class ;
+      rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310> .
+
+
+###  http://lillydog.net/ontologies/story-core#Agent
+:Agent rdf:type owl:Class ;
+       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> .
+
+
+###  http://lillydog.net/ontologies/story-core#Goal
+:Goal rdf:type owl:Class ;
+      rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000005> .
+
+
+###  http://lillydog.net/ontologies/story-core#OathOrPromise
+:OathOrPromise rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000001> .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000310
@@ -222,45 +295,9 @@ xsd:date rdf:type rdfs:Datatype .
 <http://schema.org/Person> rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Animal
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Animal> rdf:type owl:Class ;
-                                                                                   rdfs:subClassOf <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Organism> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Battle
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Battle> rdf:type owl:Class ;
-                                                                                   rdfs:subClassOf <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Event> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Birth
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Birth> rdf:type owl:Class ;
-                                                                                  rdfs:subClassOf <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Event> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Death
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Death> rdf:type owl:Class ;
-                                                                                  rdfs:subClassOf <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Event> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Event
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Event> rdf:type owl:Class ;
-                                                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#FictionalCharacter
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#FictionalCharacter> rdf:type owl:Class ;
-                                                                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ,
-                                                                                                               <http://xmlns.com/foaf/0.1/Agent> .
-
-
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#FictionalGeographicPlace
 <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#FictionalGeographicPlace> rdf:type owl:Class ;
                                                                                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000009> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Fight
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Fight> rdf:type owl:Class ;
-                                                                                  rdfs:subClassOf <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Event> .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Goal
@@ -268,58 +305,17 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000005> .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#JourneyOrTrip
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#JourneyOrTrip> rdf:type owl:Class ;
-                                                                                          rdfs:subClassOf <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Event> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#ManufacturedObject
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#ManufacturedObject> rdf:type owl:Class ;
-                                                                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#MilitaryOrganization
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#MilitaryOrganization> rdf:type owl:Class ;
-                                                                                                 rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Novel
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Novel> rdf:type owl:Class ;
-                                                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310> .
-
-
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Oath
 <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Oath> rdf:type owl:Class ;
                                                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000001> .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Organism
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Organism> rdf:type owl:Class ;
-                                                                                     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Play
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Play> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Trial
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Trial> rdf:type owl:Class ;
-                                                                                  rdfs:subClassOf <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Event> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Weapon
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Weapon> rdf:type owl:Class ;
-                                                                                   rdfs:subClassOf <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#ManufacturedObject> .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Work
-<http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Work> rdf:type owl:Class ;
-                                                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310> .
-
-
 ###  http://www.w3.org/2000/10/swap/pim/contact#Person
 <http://www.w3.org/2000/10/swap/pim/contact#Person> rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
@@ -334,17 +330,17 @@ xsd:date rdf:type rdfs:Datatype .
 #    Individuals
 #################################################################
 
-###  http://dg1an3.github.io/story-ontology/story-core#Bottle_DrinkMe
+###  http://lillydog.net/ontologies/story-core#Bottle_DrinkMe
 :Bottle_DrinkMe rdf:type owl:NamedIndividual ,
                          :ManufacturedObject .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Cake_EatMe
+###  http://lillydog.net/ontologies/story-core#Cake_EatMe
 :Cake_EatMe rdf:type owl:NamedIndividual ,
                      :FoodStuff .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Chapter_1_DownTheRabbithole
+###  http://lillydog.net/ontologies/story-core#Chapter_1_DownTheRabbithole
 :Chapter_1_DownTheRabbithole rdf:type owl:NamedIndividual ,
                                       :Chapter ;
                              :has_character :Character_Alice ,
@@ -353,21 +349,21 @@ xsd:date rdf:type rdfs:Datatype .
                              <http://purl.org/dc/elements/1.1/title> "Chapter 1 - Down the Rabbit Hole"@en .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Chapter_2_ThePoolOfTears
+###  http://lillydog.net/ontologies/story-core#Chapter_2_ThePoolOfTears
 :Chapter_2_ThePoolOfTears rdf:type owl:NamedIndividual ,
                                    :Chapter ;
                           <http://purl.org/dc/elements/1.1/description> "The chapter opens with Alice growing to such a tremendous size that her head hits the ceiling. Unhappy, Alice begins to cry and her tears literally flood the hallway. Shrinking down again due to a fan she had picked up, Alice swims through her own tears and meets a mouse, who is swimming as well. Alice, thinking he may be a French mouse, tries to make small talk with him in elementary French. Her opening gambit \"Où est ma chatte?\" (transl. \"Where is my cat?\"), however, offends the mouse, who then tries to escape her."@en ;
                           <http://purl.org/dc/elements/1.1/title> "Chapter Two – The Pool of Tears"@en .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Chapter_3_TheCaucusRaceandaLongTale
+###  http://lillydog.net/ontologies/story-core#Chapter_3_TheCaucusRaceandaLongTale
 :Chapter_3_TheCaucusRaceandaLongTale rdf:type owl:NamedIndividual ,
                                               :Chapter ;
                                      <http://purl.org/dc/elements/1.1/description> "The sea of tears becomes crowded with other animals and birds that have been swept away by the rising waters. Alice and the other animals convene on the bank and the question among them is how to get dry again. Mouse gives them a very dry lecture on William the Conqueror. A dodo decides that the best thing to dry them off would be a Caucus-Race, which consists of everyone running in a circle with no clear winner. Alice eventually frightens all the animals away, unwittingly, by talking about her (moderately ferocious) cat." ;
                                      <http://purl.org/dc/elements/1.1/title> "Chapter Three – The Caucus Race and a Long Tale" .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Chapter_4_TheRabbitSendsALittleBill
+###  http://lillydog.net/ontologies/story-core#Chapter_4_TheRabbitSendsALittleBill
 :Chapter_4_TheRabbitSendsALittleBill rdf:type owl:NamedIndividual ;
                                      :has_character :Character_Alice ,
                                                     :Character_TheWhiteRabbit ;
@@ -375,42 +371,42 @@ xsd:date rdf:type rdfs:Datatype .
                                      <http://purl.org/dc/elements/1.1/title> "Chapter Four – The Rabbit Sends a Little Bill" .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Character_Alice
+###  http://lillydog.net/ontologies/story-core#Character_Alice
 :Character_Alice rdf:type owl:NamedIndividual ,
                           :FictionalCharacter .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Character_TheCaterpillar
+###  http://lillydog.net/ontologies/story-core#Character_TheCaterpillar
 :Character_TheCaterpillar rdf:type owl:NamedIndividual ,
                                    :FictionalCharacter .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Character_TheCheshireCat
+###  http://lillydog.net/ontologies/story-core#Character_TheCheshireCat
 :Character_TheCheshireCat rdf:type owl:NamedIndividual ,
                                    :FictionalCharacter .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Character_TheMouse
+###  http://lillydog.net/ontologies/story-core#Character_TheMouse
 :Character_TheMouse rdf:type owl:NamedIndividual ,
                              :FictionalCharacter .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Character_TheWhiteRabbit
+###  http://lillydog.net/ontologies/story-core#Character_TheWhiteRabbit
 :Character_TheWhiteRabbit rdf:type owl:NamedIndividual ,
                                    :FictionalCharacter .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Character_TweedleDee
+###  http://lillydog.net/ontologies/story-core#Character_TweedleDee
 :Character_TweedleDee rdf:type owl:NamedIndividual ,
                                :FictionalCharacter .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Character_TweedleDum
+###  http://lillydog.net/ontologies/story-core#Character_TweedleDum
 :Character_TweedleDum rdf:type owl:NamedIndividual ,
                                :FictionalCharacter .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Novel_AliceInWonderland
+###  http://lillydog.net/ontologies/story-core#Novel_AliceInWonderland
 :Novel_AliceInWonderland rdf:type owl:NamedIndividual ;
                          :has_character :Character_Alice ,
                                         :Character_TheWhiteRabbit ;
@@ -423,7 +419,7 @@ xsd:date rdf:type rdfs:Datatype .
                          <http://purl.org/dc/elements/1.1/title> "Alice's Adventures in Wonderland"@en .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Person_LewisCaroll
+###  http://lillydog.net/ontologies/story-core#Person_LewisCaroll
 :Person_LewisCaroll rdf:type owl:NamedIndividual ,
                              :Author ;
                     :made :Novel_AliceInWonderland ;
@@ -432,26 +428,26 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "Lewis Carroll"@en .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Place_TheGarden
+###  http://lillydog.net/ontologies/story-core#Place_TheGarden
 :Place_TheGarden rdf:type owl:NamedIndividual ;
                  <http://purl.org/dc/elements/1.1/description> "through a door from the Hall, which is much too small for Alice"@en .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Place_TheHall
+###  http://lillydog.net/ontologies/story-core#Place_TheHall
 :Place_TheHall rdf:type owl:NamedIndividual ;
                <http://purl.org/dc/elements/1.1/description> "at the bottom of the rabbit hole."@en .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Place_TheRabbitHole
+###  http://lillydog.net/ontologies/story-core#Place_TheRabbitHole
 :Place_TheRabbitHole rdf:type owl:NamedIndividual .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#TheFan
+###  http://lillydog.net/ontologies/story-core#TheFan
 :TheFan rdf:type owl:NamedIndividual ,
                  :ManufacturedObject .
 
 
-###  http://dg1an3.github.io/story-ontology/story-core#Trip_Alice_DownTheRabbitHole
+###  http://lillydog.net/ontologies/story-core#Trip_Alice_DownTheRabbitHole
 :Trip_Alice_DownTheRabbitHole rdf:type owl:NamedIndividual ,
                                        <http://purl.obolibrary.org/obo/BFO_0000182> .
 
