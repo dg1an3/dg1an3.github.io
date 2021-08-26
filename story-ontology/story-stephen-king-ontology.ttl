@@ -1,0 +1,270 @@
+@prefix : <http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix story: <http://www.semanticweb.org/uslander/ontologies/2021/6/core-story-ontology#> .
+@base <http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology> .
+
+<http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology> rdf:type owl:Ontology ;
+                                                                                owl:imports <http://lillydog.net/ontologies/story-core> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000051
+<http://purl.obolibrary.org/obo/BFO_0000051> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000087
+<http://purl.obolibrary.org/obo/RO_0000087> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_CarrieWhite
+:Character_CarrieWhite rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_CharlesCampion
+:Character_CharlesCampion rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_ClaudeBolton
+:Character_ClaudeBolton rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_DannyTorrence
+:Character_DannyTorrence rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_DickHallorann
+:Character_DickHallorann rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_FrannyGoldsmith
+:Character_FrannyGoldsmith rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_GlenBatemen
+:Character_GlenBatemen rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_HaroldLauder
+:Character_HaroldLauder rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_HollyGibney
+:Character_HollyGibney rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_JackTorrence
+:Character_JackTorrence rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_Kojak
+:Character_Kojak rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_LloydHenreid
+:Character_LloydHenreid rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_MargaretWhite
+:Character_MargaretWhite rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_MotherAbigail
+:Character_MotherAbigail rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_RalphAnderson
+:Character_RalphAnderson rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_RandallFlag
+:Character_RandallFlag rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_StuartRedman
+:Character_StuartRedman rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_SueSnell
+:Character_SueSnell rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_TerryMaitland
+:Character_TerryMaitland rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Character_WendyTorrence
+:Character_WendyTorrence rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Disease_CaptainTrips
+:Disease_CaptainTrips rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Event_ChamberlainProm
+:Event_ChamberlainProm rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#NovelSeries_TheDarkTower
+:NovelSeries_TheDarkTower rdf:type owl:NamedIndividual ;
+                          <http://purl.obolibrary.org/obo/BFO_0000051> :Novel_TheGunslinger ;
+                          <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/The_Dark_Tower_(series)"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Novel_Carrie
+:Novel_Carrie rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Novel> ;
+              <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#has_character> :Character_CarrieWhite ,
+                                                                                                        :Character_MargaretWhite ,
+                                                                                                        :Character_SueSnell ;
+              <http://purl.org/dc/elements/1.1/creator> :Person_StephenKing ;
+              <http://purl.org/dc/elements/1.1/date> "1974-04-05T00:00:00"^^xsd:dateTime ;
+              <http://purl.org/dc/elements/1.1/description> """In the Maine town of Chamberlain in the year 1979, Carietta \"Carrie\" White is a 16-year-old girl who is a target of ridicule for her frumpy appearance and unusual religious beliefs, instilled by her despotic mother, Margaret. One day, Carrie has her first period while showering in the girls' locker room after a physical education class. Carrie is terrified, having no understanding of menstruation as her mother, who despises everything related to intimacy, never told her about it. While Carrie believes she is dying, her classmates, led by a wealthy, popular girl named Chris Hargensen, insult her and throw tampons and sanitary napkins at her. The gym teacher, Rita Desjardin, helps Carrie clean up and tries to explain. On the way home, Carrie practices her unusual ability to control objects from a distance. The only time she recalls using this power was when she was three years old and caused stones to fall from the sky by her house. Once Carrie gets home, Margaret furiously accuses Carrie of sin and locks her in a closet so that she may pray.
+
+The next day, Desjardin reprimands the girls who bullied Carrie and punishes them with a week's detention, with the penalty for skipping being suspension and exclusion from the prom; this punishment is given to Chris when she defiantly leaves. After an unsuccessful bid to get her privileges reinstated through her influential father, Chris decides to exact revenge on Carrie. Sue Snell, another popular girl who tormented Carrie in the locker room, feels shame for her previous behavior and convinces her boyfriend, Tommy Ross, to invite Carrie to the prom instead. Carrie is suspicious, but accepts his offer, and begins sewing herself a prom dress. Meanwhile, Chris persuades her boyfriend Billy Nolan and his friends to gather two buckets of pig blood as she prepares a measure to rig the prom queen election in Carrie's favor.
+
+The prom initially goes well for Carrie: Tommy's friends are welcoming, and Tommy himself finds that he is attracted to Carrie as a friend. Chris's plan to rig the election is successful, and Carrie and Tommy are elected prom queen and king. However, at the moment of the coronation, Chris, from outside, dumps the pig blood onto Carrie's and Tommy's heads. Tommy is knocked unconscious by one of the buckets and dies due to serious blood loss. The sight of Carrie drenched in blood invokes laughter from the audience. Carrie leaves the building, humiliated.
+
+Outside, Carrie remembers her telekinesis and decides to enact vengeance on her tormentors. Using her powers, she hermetically seals the gym, activates the sprinkler system, inadvertently electrocutes many of her classmates, and causes a fire that eventually ignites the school's fuel tanks, causing a massive explosion that destroys the building. Those present at the prom are killed by electric shock, the fire, or the smoke. Carrie, in an overwhelming fit of rage, thwarts any incoming effort to fight the fire by opening the hydrants within the school's vicinity, then destroys gas stations and cuts power lines on her way home. As she does all this, she broadcasts a telepathic message, making all the townspeople aware that the carnage was caused by her, even if they do not know who she is.
+
+Carrie returns home to confront Margaret, who believes Carrie has been possessed by Satan and must be killed. Margaret tells her that her conception was a result of what may have been marital rape. She stabs Carrie in the shoulder with a kitchen knife, but Carrie kills her by mentally stopping her heart. Mortally wounded, Carrie makes her way to the roadhouse where she was conceived. She sees Chris and Billy leaving, having been informed of the destruction by one of Billy's friends. After Billy attempts to run Carrie over, she mentally takes control of his car and sends it racing into a wall, killing both Billy and Chris.
+
+Sue, who has been following Carrie's \"broadcast,\" finds her collapsed in the parking lot, bleeding out from the knife wound. The two have a brief telepathic conversation. Carrie had believed that Sue and Tommy had set her up for the prank, but realizes that Sue is innocent and has never felt real animosity towards her. Carrie forgives her, then dies crying out for her mother.
+
+A state of emergency is declared and the survivors make plans to relocate. Chamberlain foresees desolation in spite of the government allocation of finances toward rehabilitating the worker districts. Desjardin and the school's principal blame themselves for what happened and resign from teaching. Sue publishes a memoir based on her experiences. A \"White Committee\" report investigating paranormal abilities concludes that there are and will be others like Carrie. An Appalachian woman enthusiastically writes to her sister about her baby daughter's telekinetic powers and reminisces about their grandmother, who had similar abilities."""^^xsd:string ,
+                                                            "https://en.wikipedia.org/wiki/Carrie_(novel)"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Novel_FromABuick8
+:Novel_FromABuick8 rdf:type owl:NamedIndividual ,
+                            <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Novel> ;
+                   <http://purl.org/dc/elements/1.1/title> "From A Buick 8"^^xsd:string .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Novel_SalemsLot
+:Novel_SalemsLot rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Novel> ;
+                 <http://purl.org/dc/elements/1.1/creator> :Person_StephenKing ;
+                 <http://purl.org/dc/elements/1.1/date> "1975-10-17T00:00:00"^^xsd:dateTime ;
+                 <http://purl.org/dc/elements/1.1/description> """Ben Mears, a writer who spent part of his childhood in Jerusalem's Lot, Maine, has returned in 1975 after 25 years to try to write his next novel. He quickly becomes friends with high school teacher Matt Burke and strikes up a romantic relationship with Susan Norton, a young college graduate with ambitions of leaving Jerusalem's Lot and heading to New York. Ben has returned to the town to write a book about the long-abandoned Marsten House, where he had a bad experience as a child when he saw a hanging ghost. Mears learns that the house—the former home of Depression-era hitman Hubert \"Hubie\" Marsten—has been purchased by Kurt Barlow, ostensibly an Austrian immigrant who has arrived in the Lot to open an antique furniture store. Barlow is supposedly on an extended buying trip; only his business partner, Richard Straker, is seen in public. The truth, however, is that Barlow is an ancient vampire, and Straker is his human familiar.
+
+The duo's arrival coincides with the disappearance of a young boy, Ralphie Glick, and the death of his 12-year-old brother, Danny, who becomes the town's first vampire turned by Barlow. Barlow also turns town dump custodian Dud Rogers and telephone repairman Corey Bryant. Danny turns other locals into vampires, including the graveyard digger, Mike Ryerson; a newborn baby, Randy McDougall; a man named Jack Griffen; and Danny's mother, Marjorie. Danny fails to turn his classmate Mark Petrie, who resists him by holding a plastic cross in Danny's face.
+
+Within several days, many of the townspeople are turned. To fight the spread of the new vampires, Ben and Susan are joined by Matt and his doctor, Jimmy Cody, along with Mark and the local priest, Father Callahan. Susan is captured by Barlow, who turns her. She is eventually staked through the heart by Ben.
+
+When Father Callahan and Mark go to Mark's parents' house to explain the danger that the family is in, the power is suddenly cut off, and Barlow appears. After killing Mark's parents, Barlow takes the boy hostage. Callahan pulls out his cross in an attempt to drive him off, and it works until Barlow challenges him to throw the cross away. Callahan, not having faith enough to do so, is soon overwhelmed by Barlow, who forces Callahan to drink his blood, making him \"unclean\". When Callahan tries to re-enter his church, he receives an electric shock, preventing him from going inside. Callahan leaves Jerusalem's Lot.
+
+Matt suffers a fatal heart attack, while Jimmy is killed when he falls from a rigged staircase and is impaled by knives set up by the vampires. Ben and Mark destroy Barlow, but are lucky to escape with their lives and are forced to leave the town to the now-leaderless vampires, and they managed to retrieve Jimmy's corpse before departing to a safe place to bury it. The novel's prologue, which is set shortly after the end of the story proper, describes Ben and Mark's flight across the country to a seaside town in Mexico, where they attempt to recover from their ordeal. Mark is received into the Catholic Church by a friendly local priest and confesses for the first time what they have experienced. The epilogue has the two returning to the town a year later, intending to renew the battle. Ben, knowing that there are too many hiding places for the vampires, starts a brush fire in the nearby woods with the intent of destroying the town."""^^xsd:string ,
+                                                               "https://en.wikipedia.org/wiki/%27Salem%27s_Lot"^^xsd:anyURI ;
+                 <http://purl.org/dc/elements/1.1/title> "Salem's Lot"^^xsd:string .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Novel_TheGunslinger
+:Novel_TheGunslinger rdf:type owl:NamedIndividual ,
+                              <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Novel> ;
+                     <http://purl.org/dc/elements/1.1/creator> :Person_StephenKing ;
+                     <http://purl.org/dc/elements/1.1/date> "1982-06-10T00:00:00"^^xsd:dateTime ;
+                     <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/The_Dark_Tower:_The_Gunslinger"^^xsd:anyURI ;
+                     <http://purl.org/dc/elements/1.1/title> "The Dark Tower: The Gunslinger"^^xsd:string .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Novel_TheOutsider
+:Novel_TheOutsider rdf:type owl:NamedIndividual ,
+                            <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Novel> ;
+                   <http://purl.org/dc/elements/1.1/creator> :Person_StephenKing ;
+                   <http://purl.org/dc/elements/1.1/date> "1982-06-10T00:00:00"^^xsd:dateTime ;
+                   <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/The_Outsider"^^xsd:anyURI ;
+                   <http://purl.org/dc/elements/1.1/title> "The Outsider"^^xsd:string .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Novel_TheShining
+:Novel_TheShining rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Novel> ;
+                  <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#has_character> :Character_DannyTorrence ,
+                                                                                                            :Character_DickHallorann ,
+                                                                                                            :Character_JackTorrence ,
+                                                                                                            :Character_WendyTorrence ;
+                  <http://purl.org/dc/elements/1.1/date> "1977-01-28T00:00:00"^^xsd:dateTime ;
+                  <http://purl.org/dc/elements/1.1/description> """The Shining mainly takes place in the fictional Overlook Hotel, an isolated, haunted resort hotel located in the Colorado Rockies. The history of the hotel, which is described in backstory by several characters, includes the deaths of some of its guests and of former winter caretaker Delbert Grady, who “succumbed to cabin fever” and killed his family and himself.
+
+Jack Torrance, his wife Wendy, and their five-year-old son Danny move into the hotel after Jack accepts the position as winter caretaker. Jack is an aspiring writer[1] and recovering alcoholic with anger issues which, prior to the story, had caused him to accidentally break Danny's arm and lose his position as a teacher after assaulting a student. Jack hopes that the hotel's seclusion will help him reconnect with his family and give him the motivation needed to work on a play. Danny, unknown to his parents, possesses psychic abilities referred to as \"shining,\" which enable him to read minds and experience premonitions as well as clairvoyance. The Torrances arrive at the hotel on closing day and are given a tour by the manager. They meet Dick Hallorann, the chef, who possesses similar abilities to Danny's and helps to explain them to him, giving Hallorann and Danny a special connection.[2] The remaining staff and guests depart the hotel, leaving the Torrances alone in the hotel for the winter.
+
+As the Torrances settle in at the Overlook, Danny sees ghosts and frightening visions. Although Danny is close to his parents, he does not tell either of them about his visions because he senses that the care-taking job is important to his father and the family's future. Wendy considers leaving Jack at the Overlook to finish the job by himself; Danny refuses, thinking his father will be happier if they stayed. However, Danny soon realizes that his presence in the hotel makes the supernatural activity more powerful, turning echoes of past tragedies into dangerous threats. Apparitions take solid form and the garden's topiary animals come to life. The winter snowfall leaves the Torrances cut off from the outside world in the isolated hotel.
+
+The Overlook has difficulty possessing Danny, so it begins to possess Jack by frustrating his need and desire to work and by enticing him with the storied history of the hotel through a scrapbook and records in the basement. Jack starts to develop cabin fever and becomes increasingly unstable, destroying a CB radio and sabotaging a snowmobile, the only two links with the outside world the Torrances had. One day, after a fight with Wendy, Jack finds the hotel's bar fully stocked with liquor despite being previously empty, and witnesses a party at which he meets the ghost of a bartender named Lloyd. He also dances with a young woman ghost who tries to seduce Jack. As he gets drunk, the hotel uses the ghost of the former caretaker Grady to urge Jack to kill his wife and son. He initially resists, but the increasing influence of the hotel combined with Jack's own alcoholism and anger prove too great. He succumbs to his dark side and the control of the hotel.[3][4] Wendy and Danny get the better of Jack after he attacks Wendy, locking him inside the walk-in pantry, but the ghost of Delbert Grady releases him after he makes Jack promise to bring him Danny and to kill Wendy. Jack attacks Wendy with one of the hotel's roque mallets, grievously injuring her, but she escapes to the caretaker's suite and locks herself in the bathroom. Jack attempts to break the door with the mallet, but Wendy slashes his hand with a razor blade to deter him.
+
+Meanwhile, Hallorann has received a psychic distress call from Danny while working at a winter resort in Florida. Hallorann rushes back to the Overlook, only to be attacked by the topiary animals and severely injured by Jack. As Jack pursues Danny through the Overlook and corners him on the hotel's top floor, he briefly gains control of himself and implores Danny to run away after Danny stands his ground and denounces Jack as a mask and false face worn by the hotel. The hotel takes control of Jack again, making him violently batter his own face and skull into ruin with the mallet, destroying the last vestiges of Jack and leaving a being controlled by the hotel's own malevolent \"manager\" personality. Remembering that Jack has neglected to relieve the pressure on the hotel's unstable boiler, Danny informs the hotel that it is about to explode. As Danny, Wendy, and Hallorann flee, the hotel-creature rushes to the basement in an attempt to vent the pressure, but it is too late and the boiler explodes, killing Jack and destroying the Overlook. Fighting off a last attempt by the hotel to possess him, Hallorann guides Danny and Wendy to safety.
+
+The book's epilogue is set during the next summer. Hallorann, who has taken a chef's job at a resort in Maine, comforts Danny over the loss of his father as Wendy recuperates from the injuries Jack inflicted on her."""^^xsd:string ,
+                                                                "https://en.wikipedia.org/wiki/The_Shining_(novel)"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Novel_TheStand
+:Novel_TheStand rdf:type owl:NamedIndividual ,
+                         <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#Novel> ;
+                <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#has_character> :Character_CharlesCampion ,
+                                                                                                          :Character_FrannyGoldsmith ,
+                                                                                                          :Character_HaroldLauder ,
+                                                                                                          :Character_StuartRedman ;
+                <http://purl.org/dc/elements/1.1/creator> :Person_StephenKing ;
+                <http://purl.org/dc/elements/1.1/date> "1978-10-03T00:00:00"^^xsd:dateTime ;
+                <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/The_Stand"^^xsd:anyURI ;
+                <http://purl.org/dc/elements/1.1/title> "The Stand"^^xsd:string .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Person_StephenKing
+:Person_StephenKing rdf:type owl:NamedIndividual ,
+                             <http://xmlns.com/foaf/0.1/Person> ;
+                    <http://purl.obolibrary.org/obo/RO_0000087> story:HorrorAuthorRole .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Place_ArnetteTX
+:Place_ArnetteTX rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#FictionalGeographicPlace> .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Place_BoulderCO
+:Place_BoulderCO rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#FictionalGeographicPlace> .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Place_BoulderFreeZone
+:Place_BoulderFreeZone rdf:type owl:NamedIndividual ,
+                                <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#FictionalGeographicPlace> .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Place_ChamberlainMaine
+:Place_ChamberlainMaine rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Place_CherokeeCityGA
+:Place_CherokeeCityGA rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Place_JerusalemsLotME
+:Place_JerusalemsLotME rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Place_LasVegasNV
+:Place_LasVegasNV rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/uslander/ontologies/2021/6/core-store-ontology#FictionalGeographicPlace> .
+
+
+###  http://www.semanticweb.org/local_dev/ontologies/2021/7/stephen-king-ontology#Place_OverlookHotel
+:Place_OverlookHotel rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2021/6/core-story-ontology#HorrorAuthorRole
+story:HorrorAuthorRole rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

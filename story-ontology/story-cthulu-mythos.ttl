@@ -1,0 +1,382 @@
+@prefix : <http://www.lillydog.net/ontologies/cthulu-mythos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.lillydog.net/ontologies/cthulu-mythos> .
+
+<http://www.lillydog.net/ontologies/cthulu-mythos> rdf:type owl:Ontology ;
+                                                    owl:imports <http://lillydog.net/ontologies/story-core> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#creator
+:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#in_universe_for
+:in_universe_for rdf:type owl:AnnotationProperty .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#reference
+:reference rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#has_participant
+:has_participant rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Agent
+:Agent rdf:type owl:Class ;
+       rdfs:subClassOf :continuant .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Animal
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf :Organism .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Book
+:Book rdf:type owl:Class ;
+      rdfs:subClassOf :Manufactured_Object .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Creative_Work
+:Creative_Work rdf:type owl:Class ;
+               rdfs:subClassOf :information_content_entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Creature
+:Creature rdf:type owl:Class ;
+          rdfs:subClassOf :Animal .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Group
+:Group rdf:type owl:Class ;
+       rdfs:subClassOf :Agent ,
+                       :object_aggregate .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Manufactured_Object
+:Manufactured_Object rdf:type owl:Class ;
+                     rdfs:subClassOf :object .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Novel
+:Novel rdf:type owl:Class ;
+       rdfs:subClassOf :document .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Organism
+:Organism rdf:type owl:Class ;
+          rdfs:subClassOf :object .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Organization
+:Organization rdf:type owl:Class ;
+              rdfs:subClassOf :Agent ,
+                              :object_aggregate .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf :Agent ,
+                        :Animal .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Plant
+:Plant rdf:type owl:Class ;
+       rdfs:subClassOf :Organism .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Play
+:Play rdf:type owl:Class ;
+      rdfs:subClassOf :document .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Shoggoth
+:Shoggoth rdf:type owl:Class ;
+          rdfs:subClassOf :Organism .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Song
+:Song rdf:type owl:Class ;
+      rdfs:subClassOf :Creative_Work .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Textbook
+:Textbook rdf:type owl:Class ;
+          rdfs:subClassOf :document .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#action_specification
+:action_specification rdf:type owl:Class ;
+                      rdfs:subClassOf :directive_information_entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#continuant
+:continuant rdf:type owl:Class ;
+            rdfs:subClassOf :entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#directive_information_entity
+:directive_information_entity rdf:type owl:Class ;
+                              rdfs:subClassOf :information_content_entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#document
+:document rdf:type owl:Class ;
+          rdfs:subClassOf :information_content_entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#document_part
+:document_part rdf:type owl:Class ;
+               rdfs:subClassOf :information_content_entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#entity
+:entity rdf:type owl:Class ;
+        :in_universe_for <http://purl.obolibrary.org/obo/BFO_0000001> .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#generically_dependent_continuant
+:generically_dependent_continuant rdf:type owl:Class ;
+                                  rdfs:subClassOf :continuant .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#geographic_location
+:geographic_location rdf:type owl:Class ;
+                     rdfs:subClassOf :site .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#history
+:history rdf:type owl:Class ;
+         rdfs:subClassOf :process .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#immaterial_entity
+:immaterial_entity rdf:type owl:Class ;
+                   rdfs:subClassOf :independent_continuant .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#independent_continuant
+:independent_continuant rdf:type owl:Class ;
+                        rdfs:subClassOf :continuant .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#information_content_entity
+:information_content_entity rdf:type owl:Class ;
+                            rdfs:subClassOf :generically_dependent_continuant .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#material_entity
+:material_entity rdf:type owl:Class ;
+                 rdfs:subClassOf :independent_continuant .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#object
+:object rdf:type owl:Class ;
+        rdfs:subClassOf :material_entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#object_aggregate
+:object_aggregate rdf:type owl:Class ;
+                  rdfs:subClassOf :material_entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#objective_specification
+:objective_specification rdf:type owl:Class ;
+                         rdfs:subClassOf :directive_information_entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#occurrent
+:occurrent rdf:type owl:Class ;
+           rdfs:subClassOf :entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#plan_specification
+:plan_specification rdf:type owl:Class ;
+                    rdfs:subClassOf :directive_information_entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#planned_process
+:planned_process rdf:type owl:Class ;
+                 rdfs:subClassOf :process .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#process
+:process rdf:type owl:Class ;
+         rdfs:subClassOf :occurrent .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#quality
+:quality rdf:type owl:Class ;
+         rdfs:subClassOf :specifically_dependent_continuant .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#realizable_entity
+:realizable_entity rdf:type owl:Class ;
+                   rdfs:subClassOf :specifically_dependent_continuant .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#site
+:site rdf:type owl:Class ;
+      rdfs:subClassOf :immaterial_entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#spatial_region
+:spatial_region rdf:type owl:Class ;
+                rdfs:subClassOf :immaterial_entity .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#specifically_dependent_continuant
+:specifically_dependent_continuant rdf:type owl:Class ;
+                                   rdfs:subClassOf :continuant .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Book_Necromonicon_Copy_at_Miskatonic_University
+:Book_Necromonicon_Copy_at_Miskatonic_University rdf:type owl:NamedIndividual ,
+                                                          :Book ;
+                                                 :reference "https://en.wikipedia.org/wiki/Necronomicon"^^xsd:anyURI ;
+                                                 rdfs:seeAlso "Al Azif"^^xsd:string .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Campus_of_MiskatonicUniversity
+:Campus_of_MiskatonicUniversity rdf:type owl:NamedIndividual ,
+                                         :geographic_location ;
+                                owl:topObjectProperty :Place_ArkhamMassachussets .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Document_Necromonicon
+:Document_Necromonicon rdf:type owl:NamedIndividual ,
+                                :Textbook ;
+                       :creator :Person_MadArab ;
+                       :reference "https://en.wikipedia.org/wiki/Necronomicon"^^xsd:anyURI ;
+                       rdfs:comment "a.k.a. Al Azif"^^xsd:string .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Entity_Cthulu
+:Entity_Cthulu rdf:type owl:NamedIndividual ,
+                        :Agent .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Entity_Yog-Sothoth
+:Entity_Yog-Sothoth rdf:type owl:NamedIndividual ,
+                             :Agent .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Event_Antarctica_Expedition_1930
+:Event_Antarctica_Expedition_1930 rdf:type owl:NamedIndividual ,
+                                           :planned_process ;
+                                  :has_participant :Person_Dr_William_Dyer ;
+                                  rdfs:seeAlso "https://en.wikipedia.org/wiki/At_the_Mountains_of_Madness"^^xsd:string .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Person_Charles_Dexter_Ward
+:Person_Charles_Dexter_Ward rdf:type owl:NamedIndividual ,
+                                     :Person ;
+                            rdfs:comment "The novel, set in 1928, describes how Charles Dexter Ward becomes obsessed with his distant ancestor, Joseph Curwen, an alleged wizard with unsavory habits. Ward physically resembles Curwen, and attempts to duplicate his ancestor's Qabalistic and alchemical feats. He eventually uses this knowledge to physically resurrect Curwen. Ward's doctor, Marinus Bicknell Willett, investigates Ward's activities and is horrified by what he finds."^^xsd:string .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Person_Dr_William_Dyer
+:Person_Dr_William_Dyer rdf:type owl:NamedIndividual ,
+                                 :Person ;
+                        rdfs:comment "Dr. William Dyer of Miskatonic University"^^xsd:string ;
+                        rdfs:seeAlso "At the Montains of Madness"^^xsd:string .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Person_Joseph_Curwen
+:Person_Joseph_Curwen rdf:type owl:NamedIndividual ,
+                               :Person .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Person_MadArab
+:Person_MadArab rdf:type owl:NamedIndividual ,
+                         :Person ;
+                rdfs:comment "In the \"History\", Alhazred is said to have been a \"half-crazed Arab\" who worshipped the Lovecraftian entities Yog-Sothoth and Cthulhu in the early 700s CE. He is described as being from Sanaá in Yemen. He visited the ruins of Babylon, the \"subterranean secrets\" of Memphis and the Empty Quarter of Arabia. In his last years, he lived in Damascus, where he wrote Al Azif before his sudden and mysterious death in 738. In subsequent years, Lovecraft wrote, the Azif \"gained considerable, though surreptitious circulation amongst the philosophers of the age.\" In 950, it was translated into Greek and given the title Necronomicon by Theodorus Philetas, a fictional scholar from Constantinople. This version \"impelled certain experimenters to terrible attempts\" before being \"suppressed and burnt\" in 1050 by Patriarch Michael (a historical figure who died in 1059)."^^xsd:string ;
+                rdfs:label "Abdul Alhazred"^^xsd:string ;
+                rdfs:seeAlso "Mad Arab"^^xsd:string .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Person_Olaus_Wormius
+:Person_Olaus_Wormius rdf:type owl:NamedIndividual ,
+                               :Person ;
+                      rdfs:comment "Latin translator f the Necromonicon"^^xsd:string .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Person_Patriarch_Michael
+:Person_Patriarch_Michael rdf:type owl:NamedIndividual ,
+                                   :Person ;
+                          rdfs:comment "Burned the Greek version of the Necromonicon"^^xsd:string .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Person_Theodorus_Philetas
+:Person_Theodorus_Philetas rdf:type owl:NamedIndividual ,
+                                    :Person .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Place_ArkhamMassachussets
+:Place_ArkhamMassachussets rdf:type owl:NamedIndividual ,
+                                    :geographic_location .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Place_Babylon
+:Place_Babylon rdf:type owl:NamedIndividual ,
+                        :geographic_location .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Place_Constantinople
+:Place_Constantinople rdf:type owl:NamedIndividual ,
+                               :geographic_location .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Place_Damascus
+:Place_Damascus rdf:type owl:NamedIndividual ,
+                         :geographic_location .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Place_Memphis
+:Place_Memphis rdf:type owl:NamedIndividual ,
+                        :geographic_location .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Place_ProvidenceRI
+:Place_ProvidenceRI rdf:type owl:NamedIndividual ,
+                             :geographic_location .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Place_Yemen
+:Place_Yemen rdf:type owl:NamedIndividual ,
+                      :geographic_location .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#Quote_That_Is_Not_Dead
+:Quote_That_Is_Not_Dead rdf:type owl:NamedIndividual ,
+                                 :document_part ;
+                        :creator :Person_MadArab ;
+                        rdfs:comment """That is not dead which can eternal lie. 
+And with strange aeons even death may die."""^^xsd:string ;
+                        rdfs:seeAlso "The Nameless City, 1921"^^xsd:string .
+
+
+###  http://www.lillydog.net/ontologies/cthulu-mythos#University_MiskatonicUniversity
+:University_MiskatonicUniversity rdf:type owl:NamedIndividual ,
+                                          :Organization .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
