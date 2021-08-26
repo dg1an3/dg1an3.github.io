@@ -1,0 +1,200 @@
+@prefix : <http://lillydog.net/ontologies/story-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://lillydog.net/ontologies/story-core> .
+
+<http://lillydog.net/ontologies/story-core> rdf:type owl:Ontology ;
+                                             owl:imports <http://purl.obolibrary.org/obo/iao/2020-12-09/iao.owl> ;
+                                             rdfs:comment "an ontology for describing fiction: characters, plots, places"^^xsd:string .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:has_character rdf:type owl:ObjectProperty .
+:made rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+:Agent rdf:type owl:Class ;
+       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> .
+:Group rdf:type owl:Class ;
+       rdfs:subClassOf :Agent , <http://purl.obolibrary.org/obo/BFO_0000027> .
+:Organization rdf:type owl:Class ;
+              rdfs:subClassOf :Agent ,
+                              <http://purl.obolibrary.org/obo/BFO_0000027> .
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf :Agent ,
+                        :Animal .
+
+:Author rdf:type owl:Class ;
+        rdfs:subClassOf [ owl:intersectionOf ( :Person
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
+                                                 owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000442>
+                                               ]
+                                             ) ;
+                          rdf:type owl:Class
+                        ] .
+:Chapter rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+:FictionalCharacter rdf:type owl:Class ;
+    rdfs:subClassOf :Agent , <http://purl.obolibrary.org/obo/BFO_0000031> .
+
+:Goal rdf:type owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000005> .
+:FoodStuff rdf:type owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+:ManufacturedObject rdf:type owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
+
+:FictionalWork rdf:type owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310> .
+:Novel rdf:type owl:Class ;
+       rdfs:subClassOf :FictionalWork .
+:Play rdf:type owl:Class ;
+      rdfs:subClassOf :FictionalWork .
+
+:Organism rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
+:Plant rdf:type owl:Class ;
+       rdfs:subClassOf :Organism .
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf :Organism .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://lillydog.net/ontologies/story-core#Bottle_DrinkMe
+:Bottle_DrinkMe rdf:type owl:NamedIndividual ,
+                         :ManufacturedObject .
+
+
+###  http://lillydog.net/ontologies/story-core#Cake_EatMe
+:Cake_EatMe rdf:type owl:NamedIndividual ,
+                     :FoodStuff .
+
+
+###  http://lillydog.net/ontologies/story-core#Chapter_1_DownTheRabbithole
+:Chapter_1_DownTheRabbithole rdf:type owl:NamedIndividual ,
+                                      :Chapter ;
+                             :has_character :Character_Alice ,
+                                            :Character_TheWhiteRabbit ;
+                             <http://purl.org/dc/elements/1.1/description> "Alice, a seven-year-old girl, is feeling bored and drowsy while sitting on the riverbank with her elder sister. She notices a talking, clothed white rabbit with a pocket watch run past. She follows it down a rabbit hole where she suddenly falls a long way to a curious hall with many locked doors of all sizes. She finds a little key to a door too small for her to fit through, but through it, she sees an attractive garden. She then discovers a bottle on a table labelled \"DRINK ME,\" the contents of which cause her to shrink too small to reach the key which she had left on the table. She subsequently eats a cake labelled \"EAT ME\" in currants as the chapter closes."@en ;
+                             <http://purl.org/dc/elements/1.1/title> "Chapter 1 - Down the Rabbit Hole"@en .
+
+
+###  http://lillydog.net/ontologies/story-core#Chapter_2_ThePoolOfTears
+:Chapter_2_ThePoolOfTears rdf:type owl:NamedIndividual ,
+                                   :Chapter ;
+                          <http://purl.org/dc/elements/1.1/description> "The chapter opens with Alice growing to such a tremendous size that her head hits the ceiling. Unhappy, Alice begins to cry and her tears literally flood the hallway. Shrinking down again due to a fan she had picked up, Alice swims through her own tears and meets a mouse, who is swimming as well. Alice, thinking he may be a French mouse, tries to make small talk with him in elementary French. Her opening gambit \"Où est ma chatte?\" (transl. \"Where is my cat?\"), however, offends the mouse, who then tries to escape her."@en ;
+                          <http://purl.org/dc/elements/1.1/title> "Chapter Two – The Pool of Tears"@en .
+
+
+###  http://lillydog.net/ontologies/story-core#Chapter_3_TheCaucusRaceandaLongTale
+:Chapter_3_TheCaucusRaceandaLongTale rdf:type owl:NamedIndividual ,
+                                              :Chapter ;
+                                     <http://purl.org/dc/elements/1.1/description> "The sea of tears becomes crowded with other animals and birds that have been swept away by the rising waters. Alice and the other animals convene on the bank and the question among them is how to get dry again. Mouse gives them a very dry lecture on William the Conqueror. A dodo decides that the best thing to dry them off would be a Caucus-Race, which consists of everyone running in a circle with no clear winner. Alice eventually frightens all the animals away, unwittingly, by talking about her (moderately ferocious) cat." ;
+                                     <http://purl.org/dc/elements/1.1/title> "Chapter Three – The Caucus Race and a Long Tale" .
+
+
+###  http://lillydog.net/ontologies/story-core#Chapter_4_TheRabbitSendsALittleBill
+:Chapter_4_TheRabbitSendsALittleBill rdf:type owl:NamedIndividual ;
+                                     :has_character :Character_Alice ,
+                                                    :Character_TheWhiteRabbit ;
+                                     <http://purl.org/dc/elements/1.1/description> "White Rabbit appears again in search of the Duchess's gloves and fan. Mistaking her for his maidservant, Mary Ann, Rabbit orders Alice to go into the house and retrieve them. Inside the house she finds another little bottle and drinks from it, immediately beginning to grow again. The horrified Rabbit orders his gardener, Bill the Lizard, to climb on the roof and go down the chimney. Outside, Alice hears the voices of animals that have gathered to gawk at her giant arm. The crowd hurls pebbles at her, which turn into little cakes. Alice eats them, and they reduce her again in size." ;
+                                     <http://purl.org/dc/elements/1.1/title> "Chapter Four – The Rabbit Sends a Little Bill" .
+
+
+###  http://lillydog.net/ontologies/story-core#Character_Alice
+:Character_Alice rdf:type owl:NamedIndividual ,
+                          :FictionalCharacter .
+
+
+###  http://lillydog.net/ontologies/story-core#Character_TheCaterpillar
+:Character_TheCaterpillar rdf:type owl:NamedIndividual ,
+                                   :FictionalCharacter .
+
+
+###  http://lillydog.net/ontologies/story-core#Character_TheCheshireCat
+:Character_TheCheshireCat rdf:type owl:NamedIndividual ,
+                                   :FictionalCharacter .
+
+
+###  http://lillydog.net/ontologies/story-core#Character_TheMouse
+:Character_TheMouse rdf:type owl:NamedIndividual ,
+                             :FictionalCharacter .
+
+
+###  http://lillydog.net/ontologies/story-core#Character_TheWhiteRabbit
+:Character_TheWhiteRabbit rdf:type owl:NamedIndividual ,
+                                   :FictionalCharacter .
+
+
+###  http://lillydog.net/ontologies/story-core#Character_TweedleDee
+:Character_TweedleDee rdf:type owl:NamedIndividual ,
+                               :FictionalCharacter .
+
+
+###  http://lillydog.net/ontologies/story-core#Character_TweedleDum
+:Character_TweedleDum rdf:type owl:NamedIndividual ,
+                               :FictionalCharacter .
+
+
+###  http://lillydog.net/ontologies/story-core#Novel_AliceInWonderland
+:Novel_AliceInWonderland rdf:type owl:NamedIndividual ;
+                         :has_character :Character_Alice ,
+                                        :Character_TheWhiteRabbit ;
+                         <http://purl.obolibrary.org/obo/BFO_0000051> :Chapter_1_DownTheRabbithole ,
+                                                                      :Chapter_2_ThePoolOfTears ,
+                                                                      :Chapter_3_TheCaucusRaceandaLongTale ;
+                         <http://purl.org/dc/elements/1.1/creator> :Person_LewisCaroll ;
+                         <http://purl.org/dc/elements/1.1/date> "1865-26-11T00:00:00" ;
+                         <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland"@en ;
+                         <http://purl.org/dc/elements/1.1/title> "Alice's Adventures in Wonderland"@en .
+
+
+###  http://lillydog.net/ontologies/story-core#Person_LewisCaroll
+:Person_LewisCaroll rdf:type owl:NamedIndividual ,
+                             :Author ;
+                    :made :Novel_AliceInWonderland ;
+                    <http://purl.obolibrary.org/obo/IAO_0000118> "Charles Lutwidge Dodgson"@en ;
+                    <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/Lewis_Carroll"@en ;
+                    rdfs:label "Lewis Carroll"@en .
+
+
+###  http://lillydog.net/ontologies/story-core#Place_TheGarden
+:Place_TheGarden rdf:type owl:NamedIndividual ;
+                 <http://purl.org/dc/elements/1.1/description> "through a door from the Hall, which is much too small for Alice"@en .
+
+
+###  http://lillydog.net/ontologies/story-core#Place_TheHall
+:Place_TheHall rdf:type owl:NamedIndividual ;
+               <http://purl.org/dc/elements/1.1/description> "at the bottom of the rabbit hole."@en .
+
+
+###  http://lillydog.net/ontologies/story-core#Place_TheRabbitHole
+:Place_TheRabbitHole rdf:type owl:NamedIndividual .
+
+
+###  http://lillydog.net/ontologies/story-core#TheFan
+:TheFan rdf:type owl:NamedIndividual ,
+                 :ManufacturedObject .
+
+
+###  http://lillydog.net/ontologies/story-core#Trip_Alice_DownTheRabbitHole
+:Trip_Alice_DownTheRabbitHole rdf:type owl:NamedIndividual ,
+                                       <http://purl.obolibrary.org/obo/BFO_0000182> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
