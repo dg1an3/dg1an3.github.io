@@ -4,13 +4,13 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://lillydog.net/ontologies/story-core> .
+@base <http://dg1an3.github.io/story-ontology/story-core> .
 
-<http://lillydog.net/ontologies/story-core> rdf:type owl:Ontology ;
-                                             owl:imports <http://purl.obolibrary.org/obo/iao/2020-12-09/iao.owl> ,
-                                                         <http://xmlns.com/foaf/0.1/> ;
-                                             rdfs:comment "an ontology for describing fiction: characters, plots, places"^^xsd:string ,
-                                                          "an ontology of characters and places in fiction"^^xsd:string .
+<http://dg1an3.github.io/story-ontology/story-core> rdf:type owl:Ontology ;
+                                                     owl:imports <http://purl.obolibrary.org/obo/iao/2020-12-09/iao.owl> ,
+                                                                 <http://xmlns.com/foaf/0.1/> ;
+                                                     rdfs:comment "an ontology for describing fiction: characters, plots, places"^^xsd:string ,
+                                                                  "an ontology of characters and places in fiction"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -56,11 +56,11 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://lillydog.net/ontologies/story-core#has_character
+###  http://dg1an3.github.io/story-ontology/story-core#has_character
 :has_character rdf:type owl:ObjectProperty .
 
 
-###  http://lillydog.net/ontologies/story-core#made
+###  http://dg1an3.github.io/story-ontology/story-core#made
 :made rdf:type owl:ObjectProperty ;
       rdfs:subPropertyOf owl:topObjectProperty .
 
@@ -110,17 +110,17 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://lillydog.net/ontologies/story-core#Agent
+###  http://dg1an3.github.io/story-ontology/story-core#Agent
 :Agent rdf:type owl:Class ;
        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> .
 
 
-###  http://lillydog.net/ontologies/story-core#Animal
+###  http://dg1an3.github.io/story-ontology/story-core#Animal
 :Animal rdf:type owl:Class ;
         rdfs:subClassOf :Organism .
 
 
-###  http://lillydog.net/ontologies/story-core#Author
+###  http://dg1an3.github.io/story-ontology/story-core#Author
 :Author rdf:type owl:Class ;
         rdfs:subClassOf [ owl:intersectionOf ( :Person
                                                [ rdf:type owl:Restriction ;
@@ -132,76 +132,76 @@ xsd:date rdf:type rdfs:Datatype .
                         ] .
 
 
-###  http://lillydog.net/ontologies/story-core#Chapter
+###  http://dg1an3.github.io/story-ontology/story-core#Chapter
 :Chapter rdf:type owl:Class ;
          rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
 
 
-###  http://lillydog.net/ontologies/story-core#FictionalCharacter
+###  http://dg1an3.github.io/story-ontology/story-core#FictionalCharacter
 :FictionalCharacter rdf:type owl:Class ;
                     rdfs:subClassOf :Agent ,
                                     <http://purl.obolibrary.org/obo/BFO_0000031> .
 
 
-###  http://lillydog.net/ontologies/story-core#FictionalWork
+###  http://dg1an3.github.io/story-ontology/story-core#FictionalWork
 :FictionalWork rdf:type owl:Class ;
                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310> .
 
 
-###  http://lillydog.net/ontologies/story-core#FoodStuff
+###  http://dg1an3.github.io/story-ontology/story-core#FoodStuff
 :FoodStuff rdf:type owl:Class ;
            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
 
 
-###  http://lillydog.net/ontologies/story-core#Goal
+###  http://dg1an3.github.io/story-ontology/story-core#Goal
 :Goal rdf:type owl:Class ;
       rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000005> .
 
 
-###  http://lillydog.net/ontologies/story-core#Group
+###  http://dg1an3.github.io/story-ontology/story-core#Group
 :Group rdf:type owl:Class ;
        rdfs:subClassOf :Agent ,
                        <http://purl.obolibrary.org/obo/BFO_0000027> .
 
 
-###  http://lillydog.net/ontologies/story-core#ManufacturedObject
+###  http://dg1an3.github.io/story-ontology/story-core#ManufacturedObject
 :ManufacturedObject rdf:type owl:Class ;
                     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
 
 
-###  http://lillydog.net/ontologies/story-core#Novel
+###  http://dg1an3.github.io/story-ontology/story-core#Novel
 :Novel rdf:type owl:Class ;
        rdfs:subClassOf :FictionalWork .
 
 
-###  http://lillydog.net/ontologies/story-core#OathOrPromise
+###  http://dg1an3.github.io/story-ontology/story-core#OathOrPromise
 :OathOrPromise rdf:type owl:Class ;
                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000001> .
 
 
-###  http://lillydog.net/ontologies/story-core#Organism
+###  http://dg1an3.github.io/story-ontology/story-core#Organism
 :Organism rdf:type owl:Class ;
           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
 
 
-###  http://lillydog.net/ontologies/story-core#Organization
+###  http://dg1an3.github.io/story-ontology/story-core#Organization
 :Organization rdf:type owl:Class ;
               rdfs:subClassOf :Agent ,
                               <http://purl.obolibrary.org/obo/BFO_0000027> .
 
 
-###  http://lillydog.net/ontologies/story-core#Person
+###  http://dg1an3.github.io/story-ontology/story-core#Person
 :Person rdf:type owl:Class ;
         rdfs:subClassOf :Agent ,
                         :Animal .
 
 
-###  http://lillydog.net/ontologies/story-core#Plant
+###  http://dg1an3.github.io/story-ontology/story-core#Plant
 :Plant rdf:type owl:Class ;
        rdfs:subClassOf :Organism .
 
 
-###  http://lillydog.net/ontologies/story-core#Play
+###  http://dg1an3.github.io/story-ontology/story-core#Play
 :Play rdf:type owl:Class ;
       rdfs:subClassOf :FictionalWork .
 
@@ -334,17 +334,17 @@ xsd:date rdf:type rdfs:Datatype .
 #    Individuals
 #################################################################
 
-###  http://lillydog.net/ontologies/story-core#Bottle_DrinkMe
+###  http://dg1an3.github.io/story-ontology/story-core#Bottle_DrinkMe
 :Bottle_DrinkMe rdf:type owl:NamedIndividual ,
                          :ManufacturedObject .
 
 
-###  http://lillydog.net/ontologies/story-core#Cake_EatMe
+###  http://dg1an3.github.io/story-ontology/story-core#Cake_EatMe
 :Cake_EatMe rdf:type owl:NamedIndividual ,
                      :FoodStuff .
 
 
-###  http://lillydog.net/ontologies/story-core#Chapter_1_DownTheRabbithole
+###  http://dg1an3.github.io/story-ontology/story-core#Chapter_1_DownTheRabbithole
 :Chapter_1_DownTheRabbithole rdf:type owl:NamedIndividual ,
                                       :Chapter ;
                              :has_character :Character_Alice ,
@@ -353,21 +353,21 @@ xsd:date rdf:type rdfs:Datatype .
                              <http://purl.org/dc/elements/1.1/title> "Chapter 1 - Down the Rabbit Hole"@en .
 
 
-###  http://lillydog.net/ontologies/story-core#Chapter_2_ThePoolOfTears
+###  http://dg1an3.github.io/story-ontology/story-core#Chapter_2_ThePoolOfTears
 :Chapter_2_ThePoolOfTears rdf:type owl:NamedIndividual ,
                                    :Chapter ;
                           <http://purl.org/dc/elements/1.1/description> "The chapter opens with Alice growing to such a tremendous size that her head hits the ceiling. Unhappy, Alice begins to cry and her tears literally flood the hallway. Shrinking down again due to a fan she had picked up, Alice swims through her own tears and meets a mouse, who is swimming as well. Alice, thinking he may be a French mouse, tries to make small talk with him in elementary French. Her opening gambit \"Où est ma chatte?\" (transl. \"Where is my cat?\"), however, offends the mouse, who then tries to escape her."@en ;
                           <http://purl.org/dc/elements/1.1/title> "Chapter Two – The Pool of Tears"@en .
 
 
-###  http://lillydog.net/ontologies/story-core#Chapter_3_TheCaucusRaceandaLongTale
+###  http://dg1an3.github.io/story-ontology/story-core#Chapter_3_TheCaucusRaceandaLongTale
 :Chapter_3_TheCaucusRaceandaLongTale rdf:type owl:NamedIndividual ,
                                               :Chapter ;
                                      <http://purl.org/dc/elements/1.1/description> "The sea of tears becomes crowded with other animals and birds that have been swept away by the rising waters. Alice and the other animals convene on the bank and the question among them is how to get dry again. Mouse gives them a very dry lecture on William the Conqueror. A dodo decides that the best thing to dry them off would be a Caucus-Race, which consists of everyone running in a circle with no clear winner. Alice eventually frightens all the animals away, unwittingly, by talking about her (moderately ferocious) cat." ;
                                      <http://purl.org/dc/elements/1.1/title> "Chapter Three – The Caucus Race and a Long Tale" .
 
 
-###  http://lillydog.net/ontologies/story-core#Chapter_4_TheRabbitSendsALittleBill
+###  http://dg1an3.github.io/story-ontology/story-core#Chapter_4_TheRabbitSendsALittleBill
 :Chapter_4_TheRabbitSendsALittleBill rdf:type owl:NamedIndividual ;
                                      :has_character :Character_Alice ,
                                                     :Character_TheWhiteRabbit ;
@@ -375,42 +375,42 @@ xsd:date rdf:type rdfs:Datatype .
                                      <http://purl.org/dc/elements/1.1/title> "Chapter Four – The Rabbit Sends a Little Bill" .
 
 
-###  http://lillydog.net/ontologies/story-core#Character_Alice
+###  http://dg1an3.github.io/story-ontology/story-core#Character_Alice
 :Character_Alice rdf:type owl:NamedIndividual ,
                           :FictionalCharacter .
 
 
-###  http://lillydog.net/ontologies/story-core#Character_TheCaterpillar
+###  http://dg1an3.github.io/story-ontology/story-core#Character_TheCaterpillar
 :Character_TheCaterpillar rdf:type owl:NamedIndividual ,
                                    :FictionalCharacter .
 
 
-###  http://lillydog.net/ontologies/story-core#Character_TheCheshireCat
+###  http://dg1an3.github.io/story-ontology/story-core#Character_TheCheshireCat
 :Character_TheCheshireCat rdf:type owl:NamedIndividual ,
                                    :FictionalCharacter .
 
 
-###  http://lillydog.net/ontologies/story-core#Character_TheMouse
+###  http://dg1an3.github.io/story-ontology/story-core#Character_TheMouse
 :Character_TheMouse rdf:type owl:NamedIndividual ,
                              :FictionalCharacter .
 
 
-###  http://lillydog.net/ontologies/story-core#Character_TheWhiteRabbit
+###  http://dg1an3.github.io/story-ontology/story-core#Character_TheWhiteRabbit
 :Character_TheWhiteRabbit rdf:type owl:NamedIndividual ,
                                    :FictionalCharacter .
 
 
-###  http://lillydog.net/ontologies/story-core#Character_TweedleDee
+###  http://dg1an3.github.io/story-ontology/story-core#Character_TweedleDee
 :Character_TweedleDee rdf:type owl:NamedIndividual ,
                                :FictionalCharacter .
 
 
-###  http://lillydog.net/ontologies/story-core#Character_TweedleDum
+###  http://dg1an3.github.io/story-ontology/story-core#Character_TweedleDum
 :Character_TweedleDum rdf:type owl:NamedIndividual ,
                                :FictionalCharacter .
 
 
-###  http://lillydog.net/ontologies/story-core#Novel_AliceInWonderland
+###  http://dg1an3.github.io/story-ontology/story-core#Novel_AliceInWonderland
 :Novel_AliceInWonderland rdf:type owl:NamedIndividual ;
                          :has_character :Character_Alice ,
                                         :Character_TheWhiteRabbit ;
@@ -423,7 +423,7 @@ xsd:date rdf:type rdfs:Datatype .
                          <http://purl.org/dc/elements/1.1/title> "Alice's Adventures in Wonderland"@en .
 
 
-###  http://lillydog.net/ontologies/story-core#Person_LewisCaroll
+###  http://dg1an3.github.io/story-ontology/story-core#Person_LewisCaroll
 :Person_LewisCaroll rdf:type owl:NamedIndividual ,
                              :Author ;
                     :made :Novel_AliceInWonderland ;
@@ -432,26 +432,26 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "Lewis Carroll"@en .
 
 
-###  http://lillydog.net/ontologies/story-core#Place_TheGarden
+###  http://dg1an3.github.io/story-ontology/story-core#Place_TheGarden
 :Place_TheGarden rdf:type owl:NamedIndividual ;
                  <http://purl.org/dc/elements/1.1/description> "through a door from the Hall, which is much too small for Alice"@en .
 
 
-###  http://lillydog.net/ontologies/story-core#Place_TheHall
+###  http://dg1an3.github.io/story-ontology/story-core#Place_TheHall
 :Place_TheHall rdf:type owl:NamedIndividual ;
                <http://purl.org/dc/elements/1.1/description> "at the bottom of the rabbit hole."@en .
 
 
-###  http://lillydog.net/ontologies/story-core#Place_TheRabbitHole
+###  http://dg1an3.github.io/story-ontology/story-core#Place_TheRabbitHole
 :Place_TheRabbitHole rdf:type owl:NamedIndividual .
 
 
-###  http://lillydog.net/ontologies/story-core#TheFan
+###  http://dg1an3.github.io/story-ontology/story-core#TheFan
 :TheFan rdf:type owl:NamedIndividual ,
                  :ManufacturedObject .
 
 
-###  http://lillydog.net/ontologies/story-core#Trip_Alice_DownTheRabbitHole
+###  http://dg1an3.github.io/story-ontology/story-core#Trip_Alice_DownTheRabbitHole
 :Trip_Alice_DownTheRabbitHole rdf:type owl:NamedIndividual ,
                                        <http://purl.obolibrary.org/obo/BFO_0000182> .
 
