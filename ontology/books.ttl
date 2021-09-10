@@ -1,0 +1,726 @@
+@prefix : <http://dg1an3/ontologies/2021/8/books#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://dg1an3/ontologies/2021/8/books> .
+
+<http://dg1an3/ontologies/2021/8/books> rdf:type owl:Ontology ;
+                                         owl:imports <http://dg1an3.net/ontologies/2021/8/geography> ,
+                                                     <http://purl.obolibrary.org/obo/iao/2020-12-09/iao.owl> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dg1an3/ontologies/2021/8/books#has_character
+:has_character rdf:type owl:ObjectProperty .
+
+
+###  http://dg1an3/ontologies/2021/8/books#made
+:made rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/Book
+<http://dbpedia.org/ontology/Book> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000311> .
+
+
+###  http://dbpedia.org/ontology/Novel
+<http://dbpedia.org/ontology/Novel> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://dbpedia.org/ontology/Book> .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Agent
+:Agent rdf:type owl:Class ;
+       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Author
+:Author rdf:type owl:Class ;
+        rdfs:subClassOf :Person .
+
+
+###  http://dg1an3/ontologies/2021/8/books#FictionalCharacter
+:FictionalCharacter rdf:type owl:Class ;
+                    rdfs:subClassOf :Agent .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Musician
+:Musician rdf:type owl:Class ;
+          rdfs:subClassOf :Person .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf :Agent .
+
+
+###  http://schema.org/CreativeWork
+<http://schema.org/CreativeWork> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#BiographyBook
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#BiographyBook> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://dbpedia.org/ontology/Book> .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ProfoundBook
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ProfoundBook> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://dbpedia.org/ontology/Book> .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ScienceFictionBook
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ScienceFictionBook> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://dbpedia.org/ontology/Novel> .
+
+
+###  http://xmlns.com/foaf/0.1/Document
+<http://xmlns.com/foaf/0.1/Document> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/resource/A_Glitch_in_the_Matrix
+<http://dbpedia.org/resource/A_Glitch_in_the_Matrix> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/A_Scanner_Darkly
+<http://dbpedia.org/resource/A_Scanner_Darkly> rdf:type owl:NamedIndividual ,
+                                                        <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ScienceFictionBook> ;
+                                               <http://purl.org/dc/terms/creator> "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Achilles
+<http://dbpedia.org/resource/Achilles> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Alan_Turing
+<http://dbpedia.org/resource/Alan_Turing> rdf:type owl:NamedIndividual ,
+                                                   :FictionalCharacter ,
+                                                   :Person .
+
+
+###  http://dbpedia.org/resource/Allan_Ginsburg
+<http://dbpedia.org/resource/Allan_Ginsburg> rdf:type owl:NamedIndividual ,
+                                                      :Author .
+
+
+###  http://dbpedia.org/resource/Bardo_Thodol
+<http://dbpedia.org/resource/Bardo_Thodol> rdf:type owl:NamedIndividual ,
+                                                    <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ProfoundBook> ;
+                                           rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Betty_Edwards
+<http://dbpedia.org/resource/Betty_Edwards> rdf:type owl:NamedIndividual ,
+                                                     :Author .
+
+
+###  http://dbpedia.org/resource/Brave_New_World
+<http://dbpedia.org/resource/Brave_New_World> rdf:type owl:NamedIndividual ,
+                                                       <http://schema.org/CreativeWork> .
+
+
+###  http://dbpedia.org/resource/Cerdic_of_Wessex
+<http://dbpedia.org/resource/Cerdic_of_Wessex> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Chuck_Berry
+<http://dbpedia.org/resource/Chuck_Berry> rdf:type owl:NamedIndividual ,
+                                                   :Musician .
+
+
+###  http://dbpedia.org/resource/Cities_of_the_Red_Night
+<http://dbpedia.org/resource/Cities_of_the_Red_Night> rdf:type owl:NamedIndividual ,
+                                                               <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ScienceFictionBook> ;
+                                                      <http://purl.org/dc/terms/creator> "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Culhwch
+<http://dbpedia.org/resource/Culhwch> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Desolation_Angels
+<http://dbpedia.org/resource/Desolation_Angels> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Douglas_Adams
+<http://dbpedia.org/resource/Douglas_Adams> rdf:type owl:NamedIndividual ,
+                                                     :Author ;
+                                            :made <http://dbpedia.org/resource/The_Hitchhiker%27s_Guide_to_the_Galaxy_(fictional)> .
+
+
+###  http://dbpedia.org/resource/Douglas_Hofstadter
+<http://dbpedia.org/resource/Douglas_Hofstadter> rdf:type owl:NamedIndividual ;
+                                                 :made <http://dbpedia.org/resource/Gödel,_Escher,_Bach> .
+
+
+###  http://dbpedia.org/resource/Epistle_of_James
+<http://dbpedia.org/resource/Epistle_of_James> rdf:type owl:NamedIndividual ,
+                                                        <http://schema.org/CreativeWork> ,
+                                                        <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ProfoundBook> ,
+                                                        <http://xmlns.com/foaf/0.1/Document> ;
+                                               rdfs:comment "originally from ../uslander/ontologies/2015/6/dgl-history" ,
+                                                            "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Erik_Davis
+<http://dbpedia.org/resource/Erik_Davis> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Excalibur
+<http://dbpedia.org/resource/Excalibur> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Fahrenheight_451
+<http://dbpedia.org/resource/Fahrenheight_451> rdf:type owl:NamedIndividual ,
+                                                        <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ScienceFictionBook> ;
+                                               <http://purl.org/dc/terms/creator> "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Foundation
+<http://dbpedia.org/resource/Foundation> rdf:type owl:NamedIndividual ,
+                                                  <http://xmlns.com/foaf/0.1/Document> .
+
+
+###  http://dbpedia.org/resource/Galahad
+<http://dbpedia.org/resource/Galahad> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Guinevere
+<http://dbpedia.org/resource/Guinevere> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Gwynllyw
+<http://dbpedia.org/resource/Gwynllyw> rdf:type owl:NamedIndividual ;
+                                       rdfs:comment "aka Gundleus" .
+
+
+###  http://dbpedia.org/resource/Harper_Lee
+<http://dbpedia.org/resource/Harper_Lee> rdf:type owl:NamedIndividual ;
+                                         :made <http://dbpedia.org/resource/To_Kill_a_Mockingbird> .
+
+
+###  http://dbpedia.org/resource/Herman_Hesse
+<http://dbpedia.org/resource/Herman_Hesse> rdf:type owl:NamedIndividual ;
+                                           :made <http://dbpedia.org/resource/Steppenwolf> .
+
+
+###  http://dbpedia.org/resource/Howl_and_Other_Poems
+<http://dbpedia.org/resource/Howl_and_Other_Poems> rdf:type owl:NamedIndividual ,
+                                                            <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ProfoundBook> ;
+                                                   rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/I_Am_a_Strange_Loop
+<http://dbpedia.org/resource/I_Am_a_Strange_Loop> rdf:type owl:NamedIndividual ,
+                                                           <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                  rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Isaac_Asimov
+<http://dbpedia.org/resource/Isaac_Asimov> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Jack_Kerouac
+<http://dbpedia.org/resource/Jack_Kerouac> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Keyne
+<http://dbpedia.org/resource/Keyne> rdf:type owl:NamedIndividual ;
+                                    rdfs:label "Ceinwen" .
+
+
+###  http://dbpedia.org/resource/King_Arthur
+<http://dbpedia.org/resource/King_Arthur> rdf:type owl:NamedIndividual ,
+                                                   :FictionalCharacter .
+
+
+###  http://dbpedia.org/resource/Lancelot
+<http://dbpedia.org/resource/Lancelot> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Lewis_Carroll
+<http://dbpedia.org/resource/Lewis_Carroll> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Mordred
+<http://dbpedia.org/resource/Mordred> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Naked_Lunch
+<http://dbpedia.org/resource/Naked_Lunch> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Neural_Engineering_Object
+<http://dbpedia.org/resource/Neural_Engineering_Object> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Neuromancer
+<http://dbpedia.org/resource/Neuromancer> rdf:type owl:NamedIndividual ,
+                                                   <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ScienceFictionBook> ;
+                                          rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Nikos_Kazantzakis
+<http://dbpedia.org/resource/Nikos_Kazantzakis> rdf:type owl:NamedIndividual ,
+                                                         :Author ;
+                                                :made <http://dbpedia.org/resource/Zorba_the_Greek> .
+
+
+###  http://dbpedia.org/resource/Notes_on_the_Synthesis_of_Form
+<http://dbpedia.org/resource/Notes_on_the_Synthesis_of_Form> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                             <http://purl.org/dc/elements/1.1/description> """Christopher Alexander
+Evolution
+Design Patterns"""^^xsd:string ;
+                                                             rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/On_Growth_and_Form
+<http://dbpedia.org/resource/On_Growth_and_Form> rdf:type owl:NamedIndividual ,
+                                                          <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                 <http://purl.org/dc/terms/creator> "D'Arcy Thompson"^^xsd:string ;
+                                                 rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Philip_K._Dick
+<http://dbpedia.org/resource/Philip_K._Dick> rdf:type owl:NamedIndividual ,
+                                                      :Author .
+
+
+###  http://dbpedia.org/resource/Ray_Bradbury
+<http://dbpedia.org/resource/Ray_Bradbury> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Rhiannon
+<http://dbpedia.org/resource/Rhiannon> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Robert_A._Heinlein
+<http://dbpedia.org/resource/Robert_A._Heinlein> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Rudy_Rucker
+<http://dbpedia.org/resource/Rudy_Rucker> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Saint_Derfel
+<http://dbpedia.org/resource/Saint_Derfel> rdf:type owl:NamedIndividual ,
+                                                    :FictionalCharacter ;
+                                           rdfs:label "Derfel the Fierce" .
+
+
+###  http://dbpedia.org/resource/Stephen_King
+<http://dbpedia.org/resource/Stephen_King> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Steppenwolf
+<http://dbpedia.org/resource/Steppenwolf> rdf:type owl:NamedIndividual ,
+                                                   <http://dbpedia.org/ontology/Novel> ,
+                                                   <http://schema.org/CreativeWork> ;
+                                          rdfs:comment "originally from ../uslander/ontologies/2015/6/dgl-history" ,
+                                                       "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Stranger_in_a_Strange_Land
+<http://dbpedia.org/resource/Stranger_in_a_Strange_Land> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Tao_Te_Ching
+<http://dbpedia.org/resource/Tao_Te_Ching> rdf:type owl:NamedIndividual ,
+                                                    <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ProfoundBook> ;
+                                           rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/The_Dharma_Bums
+<http://dbpedia.org/resource/The_Dharma_Bums> rdf:type owl:NamedIndividual ,
+                                                       <http://dbpedia.org/ontology/Novel> ;
+                                              <http://purl.org/dc/terms/creator> "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/The_Doors_of_Perception
+<http://dbpedia.org/resource/The_Doors_of_Perception> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/The_Heart_Is_a_Lonely_Hunter
+<http://dbpedia.org/resource/The_Heart_Is_a_Lonely_Hunter> rdf:type owl:NamedIndividual ,
+                                                                    <http://dbpedia.org/ontology/Novel> ;
+                                                           rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/The_Origin_of_Consciousness_in_the_Breakdown_of_the_Bicameral_Mind
+<http://dbpedia.org/resource/The_Origin_of_Consciousness_in_the_Breakdown_of_the_Bicameral_Mind> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                                                 <http://purl.org/dc/terms/creator> "Julian Jaynes"^^xsd:string ;
+                                                                                                 rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/The_Origin_of_Species
+<http://dbpedia.org/resource/The_Origin_of_Species> rdf:type owl:NamedIndividual ,
+                                                             <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                    <http://purl.org/dc/terms/creator> "Darwin"^^xsd:string ;
+                                                    rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" ;
+                                                    rdfs:seeAlso <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Model_Speciation> ,
+                                                                 <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Population> .
+
+
+###  http://dbpedia.org/resource/The_Phenomenon_of_Man
+<http://dbpedia.org/resource/The_Phenomenon_of_Man> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/The_Varieties_of_Religious_Experience
+<http://dbpedia.org/resource/The_Varieties_of_Religious_Experience> rdf:type owl:NamedIndividual ,
+                                                                             <http://schema.org/CreativeWork> ,
+                                                                             <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                    rdfs:comment "originally from ../uslander/ontologies/2015/6/dgl-history" ,
+                                                                                 "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/The_Warlord_Chronicles
+<http://dbpedia.org/resource/The_Warlord_Chronicles> rdf:type owl:NamedIndividual ;
+                                                     <http://purl.obolibrary.org/obo/BFO_0000051> <http://dbpedia.org/resource/Enemy_of_God_(novel)> ,
+                                                                                                  <http://dbpedia.org/resource/The_Winter_King_(novel)> .
+
+
+###  http://dbpedia.org/resource/The_Worm_Ouroboros
+<http://dbpedia.org/resource/The_Worm_Ouroboros> rdf:type owl:NamedIndividual ,
+                                                          <http://dbpedia.org/ontology/Novel> .
+
+
+###  http://dbpedia.org/resource/Thirteen_Treasures_of_the_Island_of_Britain
+<http://dbpedia.org/resource/Thirteen_Treasures_of_the_Island_of_Britain> rdf:type owl:NamedIndividual ;
+                                                                          rdfs:comment """The Cauldron of Dyrnwch the Giant
+Diwrnach""" .
+
+
+###  http://dbpedia.org/resource/To_Kill_a_Mockingbird
+<http://dbpedia.org/resource/To_Kill_a_Mockingbird> rdf:type owl:NamedIndividual ,
+                                                             <http://dbpedia.org/ontology/Novel> ;
+                                                    rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Transmigration_Of_Timothy_Archer
+<http://dbpedia.org/resource/Transmigration_Of_Timothy_Archer> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#ScienceFictionBook> ;
+                                                               rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Uther_Pendragon
+<http://dbpedia.org/resource/Uther_Pendragon> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/William_Gibson
+<http://dbpedia.org/resource/William_Gibson> rdf:type owl:NamedIndividual ,
+                                                      :Author .
+
+
+###  http://dbpedia.org/resource/William_S_Burroughs
+<http://dbpedia.org/resource/William_S_Burroughs> rdf:type owl:NamedIndividual ,
+                                                           :Author ,
+                                                           :FictionalCharacter ;
+                                                  :made <http://dbpedia.org/resource/Cities_of_the_Red_Night> ,
+                                                        <http://dbpedia.org/resource/Naked_Lunch> .
+
+
+###  http://dbpedia.org/resource/Zorba_the_Greek
+<http://dbpedia.org/resource/Zorba_the_Greek> rdf:type owl:NamedIndividual ,
+                                                       <http://dbpedia.org/ontology/Novel> ;
+                                              rdfs:seeAlso <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Person_Lyn> .
+
+
+###  http://dbpedia.org/resource/Ælle_of_Sussex
+<http://dbpedia.org/resource/Ælle_of_Sussex> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Enemy_of_God_(novel)
+<http://dbpedia.org/resource/Enemy_of_God_(novel)> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Gödel,_Escher,_Bach
+<http://dbpedia.org/resource/Gödel,_Escher,_Bach> rdf:type owl:NamedIndividual ,
+                                                           <http://schema.org/CreativeWork> ,
+                                                           <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ,
+                                                           <http://xmlns.com/foaf/0.1/Document> ;
+                                                  <http://purl.org/dc/terms/creator> "originally in .../uslander/ontologies/2016/5/dgl_ontology" ;
+                                                  rdfs:comment "originally from ../uslander/ontologies/2015/6/dgl-history" .
+
+
+###  http://dbpedia.org/resource/Merlin_(wizard)
+<http://dbpedia.org/resource/Merlin_(wizard)> rdf:type owl:NamedIndividual ,
+                                                       :FictionalCharacter .
+
+
+###  http://dbpedia.org/resource/Shamanism:_Archaic_Techniques_of_Ecstasy
+<http://dbpedia.org/resource/Shamanism:_Archaic_Techniques_of_Ecstasy> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                       <http://purl.org/dc/terms/creator> <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Person_MirceaEliade> ;
+                                                                       rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://dbpedia.org/resource/Spaun_(Semantic_Pointer_Architecture_Unified_Network)
+<http://dbpedia.org/resource/Spaun_(Semantic_Pointer_Architecture_Unified_Network)> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/The_Hitchhiker%27s_Guide_to_the_Galaxy_(fictional)
+<http://dbpedia.org/resource/The_Hitchhiker%27s_Guide_to_the_Galaxy_(fictional)> rdf:type owl:NamedIndividual ,
+                                                                                          <http://dbpedia.org/ontology/Novel> .
+
+
+###  http://dbpedia.org/resource/The_Winter_King_(novel)
+<http://dbpedia.org/resource/The_Winter_King_(novel)> rdf:type owl:NamedIndividual ,
+                                                               <http://dbpedia.org/ontology/Novel> ;
+                                                      :has_character <http://dbpedia.org/resource/King_Arthur> ,
+                                                                     <http://dbpedia.org/resource/Uther_Pendragon> ,
+                                                                     <http://dbpedia.org/resource/Merlin_(wizard)> .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Character_Brandoch_Daha
+:Character_Brandoch_Daha rdf:type owl:NamedIndividual .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Character_Goldry_Bluszco
+:Character_Goldry_Bluszco rdf:type owl:NamedIndividual .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Character_Lord_Juss
+:Character_Lord_Juss rdf:type owl:NamedIndividual .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Character_Spitfire
+:Character_Spitfire rdf:type owl:NamedIndividual .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Character_the_Tortoise
+:Character_the_Tortoise rdf:type owl:NamedIndividual .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Event_Achilles_Visits_the_Tortoise
+:Event_Achilles_Visits_the_Tortoise rdf:type owl:NamedIndividual .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Event_Cauldron_Recovered_from_Ynys_Mon
+:Event_Cauldron_Recovered_from_Ynys_Mon rdf:type owl:NamedIndividual ;
+                                        <http://purl.obolibrary.org/obo/BFO_0000066> <http://dbpedia.org/resource/Anglesey> ;
+                                        <http://purl.obolibrary.org/obo/RO_0000057> <http://dbpedia.org/resource/Keyne> ,
+                                                                                    <http://dbpedia.org/resource/Saint_Derfel> ,
+                                                                                    <http://dbpedia.org/resource/Merlin_(wizard)> ;
+                                        rdfs:comment "near the lake Cadr Bach Illyg" .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Event_Lancelot_Usurpation
+:Event_Lancelot_Usurpation rdf:type owl:NamedIndividual ;
+                           <http://purl.obolibrary.org/obo/BFO_0000066> <http://dbpedia.org/resource/Dumnonia> ;
+                           <http://purl.obolibrary.org/obo/RO_0000057> <http://dbpedia.org/resource/Lancelot> ,
+                                                                       <http://dbpedia.org/resource/Mordred> .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Event_Tor_Destruction
+:Event_Tor_Destruction rdf:type owl:NamedIndividual ;
+                       <http://purl.obolibrary.org/obo/BFO_0000066> <https://dbpedia.org/resource/Glastonbury_Tor> ;
+                       <http://purl.obolibrary.org/obo/RO_0000057> <http://dbpedia.org/resource/Thirteen_Treasures_of_the_Island_of_Britain> ;
+                       rdfs:comment """by a bolt of lightnening
+the 13 treasures of Britain are lost""" .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Place_Demonland
+:Place_Demonland rdf:type owl:NamedIndividual .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Place_Witchland
+:Place_Witchland rdf:type owl:NamedIndividual .
+
+
+###  http://dg1an3/ontologies/2021/8/books#Trip_Arthur_Derfel_to_Sea_Palace_after_Lancelot_Usurps
+:Trip_Arthur_Derfel_to_Sea_Palace_after_Lancelot_Usurps rdf:type owl:NamedIndividual ;
+                                                        <http://purl.obolibrary.org/obo/BFO_0000066> <http://dbpedia.org/resource/Dumnonia> ;
+                                                        <http://purl.obolibrary.org/obo/RO_0000057> <http://dbpedia.org/resource/Guinevere> ,
+                                                                                                    <http://dbpedia.org/resource/King_Arthur> ,
+                                                                                                    <http://dbpedia.org/resource/Saint_Derfel> ;
+                                                        rdfs:comment "where Arthur finds Guinevere in a compromising situation" .
+
+
+###  http://www.dg1an3.com/uslander/ontologies/2016/4/DerekMemories#Book_BrainWarping
+<http://www.dg1an3.com/uslander/ontologies/2016/4/DerekMemories#Book_BrainWarping> rdf:type owl:NamedIndividual ,
+                                                                                            <http://schema.org/CreativeWork> ,
+                                                                                            <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ,
+                                                                                            <http://xmlns.com/foaf/0.1/Document> ;
+                                                                                   <http://purl.org/dc/terms/contributor> """Van Essen
+Heather
+Joshi"""^^xsd:string ;
+                                                                                   <http://purl.org/dc/terms/creator> "originally in .../uslander/ontologies/2016/5/dgl_ontology" ;
+                                                                                   rdfs:comment "originally from ../uslander/ontologies/2015/6/dgl-history" ;
+                                                                                   rdfs:seeAlso <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_OnGrowthAndForm> .
+
+
+###  http://www.dg1an3.com/uslander/ontologies/2016/4/DerekMemories#Book_DogAndTheGhost
+<http://www.dg1an3.com/uslander/ontologies/2016/4/DerekMemories#Book_DogAndTheGhost> rdf:type owl:NamedIndividual ,
+                                                                                              <http://schema.org/CreativeWork> ,
+                                                                                              <http://xmlns.com/foaf/0.1/Document> ;
+                                                                                     rdfs:comment """merging:
+
+http://www.semanticweb.org/uslander/ontologies/2015/6/dgl-history#Book_dog_ghost""" .
+
+
+###  http://www.dg1an3.com/uslander/ontologies/2016/4/DerekMemories#Book_HowToBuildABrain
+<http://www.dg1an3.com/uslander/ontologies/2016/4/DerekMemories#Book_HowToBuildABrain> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ,
+                                                                                                <http://xmlns.com/foaf/0.1/Document> ;
+                                                                                       rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.dg1an3.com/uslander/ontologies/2016/4/DerekMemories#Book_IGRT
+<http://www.dg1an3.com/uslander/ontologies/2016/4/DerekMemories#Book_IGRT> rdf:type owl:NamedIndividual ,
+                                                                                    <http://schema.org/CreativeWork> ,
+                                                                                    <http://xmlns.com/foaf/0.1/Document> ;
+                                                                           rdfs:comment "originally from ../uslander/ontologies/2015/6/dgl-history" .
+
+
+###  http://www.dg1an3.com/uslander/ontologies/2016/4/DerekMemories#Book_NothingLikeItInTheWorld
+<http://www.dg1an3.com/uslander/ontologies/2016/4/DerekMemories#Book_NothingLikeItInTheWorld> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ,
+                                                                                                       <http://xmlns.com/foaf/0.1/Document> ;
+                                                                                              rdfs:comment "Huntington"^^xsd:string ,
+                                                                                                           "originally in .../uslander/ontologies/2016/5/dgl_ontology" ,
+                                                                                                           "stanford"^^xsd:string .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_ChuckBerry_Autobiography
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_ChuckBerry_Autobiography> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#BiographyBook> ;
+                                                                                                   <http://purl.org/dc/terms/creator> "originally in .../uslander/ontologies/2016/5/dgl_ontology" ;
+                                                                                                   rdfs:comment <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Person_ChuckBerry> .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_CivilizationAndItsDiscontents
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_CivilizationAndItsDiscontents> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                                                        <http://purl.org/dc/elements/1.1/title> "Civilization and its Discontents"^^xsd:string ;
+                                                                                                        <http://purl.org/dc/terms/creator> [ ] ,
+"originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_DrawingOnTheRightSide
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_DrawingOnTheRightSide> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                                                <http://purl.org/dc/terms/creator> "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_Fletcher
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_Fletcher> rdf:type owl:NamedIndividual ,
+                                                                                            <http://dbpedia.org/ontology/Novel> ;
+                                                                                   <http://purl.org/dc/terms/creator> "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_FromNeuronToBrain
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_FromNeuronToBrain> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                                            <http://purl.org/dc/terms/creator> "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_HowTheWitchGotAlf
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_HowTheWitchGotAlf> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://dbpedia.org/ontology/Novel> ;
+                                                                                            rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_Neurotribes
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_Neurotribes> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                                      <http://purl.org/dc/terms/creator> "Steve Silberman"^^xsd:string ;
+                                                                                      rdfs:comment "Cavender"^^xsd:string ,
+                                                                                                   "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_PrinciplesOfNeuralSystems
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_PrinciplesOfNeuralSystems> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                                                    <http://purl.org/dc/terms/contributor> "Leksell"^^xsd:string ,
+                                                                                                                                           "Van Essen"^^xsd:string ;
+                                                                                                    <http://purl.org/dc/terms/creator> "Kandel Schwartz Jessell"^^xsd:string ;
+                                                                                                    rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_SelfOrganizingMaps
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_SelfOrganizingMaps> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                                             <http://purl.org/dc/terms/creator> "Kohonen"^^xsd:string ;
+                                                                                             rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" ,
+                                                                                                          "theWheel"^^xsd:string .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_Serendipidity
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_Serendipidity> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://dbpedia.org/ontology/Novel> ;
+                                                                                        rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" ;
+                                                                                        rdfs:seeAlso "https://hmr.posthaven.com"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_ShakespeareTextbook
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_ShakespeareTextbook> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://dbpedia.org/ontology/Novel> ;
+                                                                                              rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_SonificationHandbook
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_SonificationHandbook> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                                               rdfs:comment """Sense of Hearing
+Pattern Recognition"""^^xsd:string ,
+                                                                                                            "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_Techgnosis
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_Techgnosis> rdf:type owl:NamedIndividual ,
+                                                                                              <http://schema.org/CreativeWork> ,
+                                                                                              <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                                     rdfs:comment "originally from ../uslander/ontologies/2015/6/dgl-history" ,
+                                                                                                  "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_TheDogAndTheGhost
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_TheDogAndTheGhost> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://dbpedia.org/ontology/Novel> ;
+                                                                                            rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_ThePowerOfMyth
+<http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#Book_ThePowerOfMyth> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/uslander/ontologies/2016/5/dgl_ontology#NonfictionBook> ;
+                                                                                         rdfs:comment "originally in .../uslander/ontologies/2016/5/dgl_ontology" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
