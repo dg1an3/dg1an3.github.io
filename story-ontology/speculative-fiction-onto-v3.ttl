@@ -524,6 +524,15 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                                                       :fictional_character .
 
 
+###  http://dbpedia.org/resource/Enemy_of_God_(novel)
+<http://dbpedia.org/resource/Enemy_of_God_(novel)> rdf:type owl:NamedIndividual ,
+                                                            :Novel ;
+                                                   <http://purl.org/dc/elements/1.1/creator> :Person_BernardCornwell ;
+                                                   <http://purl.org/dc/elements/1.1/date> "1996-04-01T00:00:00"^^xsd:dateTime ;
+                                                   <http://purl.org/dc/elements/1.1/description> "At the end of The Winter King Arthur fought the battle that forces unity on the warring British kingdoms and now he sets out to face the real enemy – the English (it is one of the great ironies of the Arthur stories that he should have become an English hero when, if he existed at all, he was a great war-leader who opposed the invading Sais). First, though, Merlin leads a perilous expedition into the mysterious west to retrieve a cauldron, one of the treasures of Britain – this cauldron story is almost certainly the root of the holy grail strand in the Arthur tales." ;
+                                                   <http://purl.org/dc/elements/1.1/title> "Enemy Of God" .
+
+
 ###  http://dbpedia.org/resource/Ford_Prefect_(character)
 <http://dbpedia.org/resource/Ford_Prefect_(character)> rdf:type owl:NamedIndividual .
 
@@ -998,18 +1007,9 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#NovelSeries_TheWarlordTrilogy
 :NovelSeries_TheWarlordTrilogy rdf:type owl:NamedIndividual ;
-                               <http://purl.obolibrary.org/obo/BFO_0000051> :Novel_EnemyOfGod ,
+                               <http://purl.obolibrary.org/obo/BFO_0000051> <http://dbpedia.org/resource/Enemy_of_God_(novel)> ,
                                                                             :Novel_TheWinterKing ;
                                <http://purl.org/dc/elements/1.1/creator> :Person_BernardCornwell .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Novel_EnemyOfGod
-:Novel_EnemyOfGod rdf:type owl:NamedIndividual ,
-                           :Novel ;
-                  <http://purl.org/dc/elements/1.1/creator> :Person_BernardCornwell ;
-                  <http://purl.org/dc/elements/1.1/date> "1996-04-01T00:00:00"^^xsd:dateTime ;
-                  <http://purl.org/dc/elements/1.1/description> "At the end of The Winter King Arthur fought the battle that forces unity on the warring British kingdoms and now he sets out to face the real enemy – the English (it is one of the great ironies of the Arthur stories that he should have become an English hero when, if he existed at all, he was a great war-leader who opposed the invading Sais). First, though, Merlin leads a perilous expedition into the mysterious west to retrieve a cauldron, one of the treasures of Britain – this cauldron story is almost certainly the root of the holy grail strand in the Arthur tales." ;
-                  <http://purl.org/dc/elements/1.1/title> "Enemy Of God" .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Novel_Foundation
@@ -1661,10 +1661,6 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                           :manufactured_object .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#TelevisionSeries_DoctorWho
-:TelevisionSeries_DoctorWho rdf:type owl:NamedIndividual .
-
-
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#TelevisionSeries_StarTrek
 :TelevisionSeries_StarTrek rdf:type owl:NamedIndividual .
 
@@ -1857,6 +1853,10 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Wedding_Claire_Jamie
 :Wedding_Claire_Jamie rdf:type owl:NamedIndividual .
+
+
+###  https://en.wikipedia.org/wiki/Doctor_Who
+<https://en.wikipedia.org/wiki/Doctor_Who> rdf:type owl:NamedIndividual .
 
 
 #################################################################
