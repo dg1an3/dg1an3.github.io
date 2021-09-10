@@ -1,26 +1,28 @@
-@prefix : <http://dg1an3.net/ontologies/2021/8/geography#> .
+@prefix : <http://dg1an3.github.io/ontology/geography#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://dg1an3.net/ontologies/2021/8/geography> .
+@base <http://dg1an3.github.io/ontology/geography> .
 
-<http://dg1an3.net/ontologies/2021/8/geography> rdf:type owl:Ontology ;
-                                                 owl:imports <http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl> ,
-                                                             <http://purl.obolibrary.org/obo/ro/core.owl> .
+<http://dg1an3.github.io/ontology/geography> rdf:type owl:Ontology ;
+                                              owl:imports <http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl> ,
+                                                          <http://purl.obolibrary.org/obo/ro/core.owl> .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://dg1an3.net/ontologies/2021/8/geography#is_near
+###  http://dg1an3.github.io/ontology/geography#is_near
 :is_near rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000050
-<http://purl.obolibrary.org/obo/BFO_0000050> rdf:type owl:ObjectProperty .
+obo:BFO_0000050 rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -28,115 +30,115 @@
 #################################################################
 
 ###  http://dbpedia.org/ontology/AdministrativeRegion
-<http://dbpedia.org/ontology/AdministrativeRegion> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://dbpedia.org/ontology/Region> .
+dbo:AdministrativeRegion rdf:type owl:Class ;
+                         rdfs:subClassOf dbo:Region .
 
 
 ###  http://dbpedia.org/ontology/Airport
-<http://dbpedia.org/ontology/Airport> rdf:type owl:Class ;
-                                      rdfs:subClassOf <http://dbpedia.org/ontology/Infrastructure> .
+dbo:Airport rdf:type owl:Class ;
+            rdfs:subClassOf dbo:Infrastructure .
 
 
 ###  http://dbpedia.org/ontology/ArchitecturalStructure
-<http://dbpedia.org/ontology/ArchitecturalStructure> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://dbpedia.org/ontology/Place> .
+dbo:ArchitecturalStructure rdf:type owl:Class ;
+                           rdfs:subClassOf dbo:Place .
 
 
 ###  http://dbpedia.org/ontology/Bridge
-<http://dbpedia.org/ontology/Bridge> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://dbpedia.org/ontology/RouteOfTransportation> .
+dbo:Bridge rdf:type owl:Class ;
+           rdfs:subClassOf dbo:RouteOfTransportation .
 
 
 ###  http://dbpedia.org/ontology/Building
-<http://dbpedia.org/ontology/Building> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://dbpedia.org/ontology/ArchitecturalStructure> .
+dbo:Building rdf:type owl:Class ;
+             rdfs:subClassOf dbo:ArchitecturalStructure .
 
 
 ###  http://dbpedia.org/ontology/CityDistrict
-<http://dbpedia.org/ontology/CityDistrict> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://dbpedia.org/ontology/PopulatedPlace> .
+dbo:CityDistrict rdf:type owl:Class ;
+                 rdfs:subClassOf dbo:PopulatedPlace .
 
 
 ###  http://dbpedia.org/ontology/Country
-<http://dbpedia.org/ontology/Country> rdf:type owl:Class ;
-                                      rdfs:subClassOf <http://dbpedia.org/ontology/PopulatedPlace> .
+dbo:Country rdf:type owl:Class ;
+            rdfs:subClassOf dbo:PopulatedPlace .
 
 
 ###  http://dbpedia.org/ontology/Infrastructure
-<http://dbpedia.org/ontology/Infrastructure> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://dbpedia.org/ontology/ArchitecturalStructure> .
+dbo:Infrastructure rdf:type owl:Class ;
+                   rdfs:subClassOf dbo:ArchitecturalStructure .
 
 
 ###  http://dbpedia.org/ontology/Island
-<http://dbpedia.org/ontology/Island> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://dbpedia.org/ontology/PopulatedPlace> .
+dbo:Island rdf:type owl:Class ;
+           rdfs:subClassOf dbo:PopulatedPlace .
 
 
 ###  http://dbpedia.org/ontology/Place
-<http://dbpedia.org/ontology/Place> rdf:type owl:Class ;
-                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000029> .
+dbo:Place rdf:type owl:Class ;
+          rdfs:subClassOf obo:BFO_0000029 .
 
 
 ###  http://dbpedia.org/ontology/PopulatedPlace
-<http://dbpedia.org/ontology/PopulatedPlace> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://dbpedia.org/ontology/Place> .
+dbo:PopulatedPlace rdf:type owl:Class ;
+                   rdfs:subClassOf dbo:Place .
 
 
 ###  http://dbpedia.org/ontology/ProtectedArea
-<http://dbpedia.org/ontology/ProtectedArea> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://dbpedia.org/ontology/Place> .
+dbo:ProtectedArea rdf:type owl:Class ;
+                  rdfs:subClassOf dbo:Place .
 
 
 ###  http://dbpedia.org/ontology/RailwayLine
-<http://dbpedia.org/ontology/RailwayLine> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://dbpedia.org/ontology/RouteOfTransportation> .
+dbo:RailwayLine rdf:type owl:Class ;
+                rdfs:subClassOf dbo:RouteOfTransportation .
 
 
 ###  http://dbpedia.org/ontology/Region
-<http://dbpedia.org/ontology/Region> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://dbpedia.org/ontology/PopulatedPlace> .
+dbo:Region rdf:type owl:Class ;
+           rdfs:subClassOf dbo:PopulatedPlace .
 
 
 ###  http://dbpedia.org/ontology/Road
-<http://dbpedia.org/ontology/Road> rdf:type owl:Class ;
-                                   rdfs:subClassOf <http://dbpedia.org/ontology/RouteOfTransportation> .
+dbo:Road rdf:type owl:Class ;
+         rdfs:subClassOf dbo:RouteOfTransportation .
 
 
 ###  http://dbpedia.org/ontology/RoadJunction
-<http://dbpedia.org/ontology/RoadJunction> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://dbpedia.org/ontology/RouteOfTransportation> .
+dbo:RoadJunction rdf:type owl:Class ;
+                 rdfs:subClassOf dbo:RouteOfTransportation .
 
 
 ###  http://dbpedia.org/ontology/RouteOfTransportation
-<http://dbpedia.org/ontology/RouteOfTransportation> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://dbpedia.org/ontology/Infrastructure> .
+dbo:RouteOfTransportation rdf:type owl:Class ;
+                          rdfs:subClassOf dbo:Infrastructure .
 
 
 ###  http://dbpedia.org/ontology/Station
-<http://dbpedia.org/ontology/Station> rdf:type owl:Class ;
-                                      rdfs:subClassOf <http://dbpedia.org/ontology/Infrastructure> .
+dbo:Station rdf:type owl:Class ;
+            rdfs:subClassOf dbo:Infrastructure .
 
 
 ###  http://dbpedia.org/ontology/Venue
-<http://dbpedia.org/ontology/Venue> rdf:type owl:Class ;
-                                    rdfs:subClassOf [ owl:intersectionOf ( <http://dbpedia.org/ontology/Building>
-                                                                           [ rdf:type owl:Restriction ;
-                                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
-                                                                             owl:someValuesFrom dbr:City
-                                                                           ]
-                                                                         ) ;
-                                                      rdf:type owl:Class
-                                                    ] .
+dbo:Venue rdf:type owl:Class ;
+          rdfs:subClassOf [ owl:intersectionOf ( dbo:Building
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty obo:BFO_0000050 ;
+                                                   owl:someValuesFrom dbr:City
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] .
 
 
 ###  http://dbpedia.org/resource/City
 dbr:City rdf:type owl:Class ;
-         rdfs:subClassOf <http://dbpedia.org/ontology/AdministrativeRegion> .
+         rdfs:subClassOf dbo:AdministrativeRegion .
 
 
 ###  http://dbpedia.org/resource/U.S._state
 dbr:U.S._state rdf:type owl:Class ;
-               rdfs:subClassOf <http://dbpedia.org/ontology/AdministrativeRegion> .
+               rdfs:subClassOf dbo:AdministrativeRegion .
 
 
 #################################################################
@@ -146,35 +148,35 @@ dbr:U.S._state rdf:type owl:Class ;
 ###  http://dbpedia.org/resource/Alabama
 dbr:Alabama rdf:type owl:NamedIndividual ,
                      dbr:U.S._state ;
-            <http://purl.obolibrary.org/obo/RO_0001025> dbr:United_States .
+            obo:RO_0001025 dbr:United_States .
 
 
 ###  http://dbpedia.org/resource/Anglesey
 dbr:Anglesey rdf:type owl:NamedIndividual ,
-                      <http://dbpedia.org/ontology/Island> ;
+                      dbo:Island ;
              rdfs:label "Ynys Mon" .
 
 
 ###  http://dbpedia.org/resource/Ardennes
 dbr:Ardennes rdf:type owl:NamedIndividual ,
-                      <http://dbpedia.org/ontology/ProtectedArea> .
+                      dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Avenue_of_the_Giants
 dbr:Avenue_of_the_Giants rdf:type owl:NamedIndividual ,
-                                  <http://dbpedia.org/ontology/ProtectedArea> .
+                                  dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Bangalore
 dbr:Bangalore rdf:type owl:NamedIndividual ,
                        dbr:City ;
-              <http://purl.obolibrary.org/obo/RO_0001025> dbr:India ;
-              <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/wiki/Bangalore"^^xsd:anyURI .
+              obo:RO_0001025 dbr:India ;
+              obo:IAO_0000115 "https://en.wikipedia.org/wiki/Bangalore"^^xsd:anyURI .
 
 
 ###  http://dbpedia.org/resource/Calgary_International_Airport
 dbr:Calgary_International_Airport rdf:type owl:NamedIndividual ,
-                                           <http://dbpedia.org/ontology/Airport> .
+                                           dbo:Airport .
 
 
 ###  http://dbpedia.org/resource/California
@@ -184,13 +186,13 @@ dbr:California rdf:type owl:NamedIndividual ,
 
 ###  http://dbpedia.org/resource/Canada
 dbr:Canada rdf:type owl:NamedIndividual ,
-                    <http://dbpedia.org/ontology/Country> .
+                    dbo:Country .
 
 
 ###  http://dbpedia.org/resource/Chicago
 dbr:Chicago rdf:type owl:NamedIndividual ,
                      dbr:City ;
-            <http://purl.obolibrary.org/obo/RO_0001025> dbr:Illinois .
+            obo:RO_0001025 dbr:Illinois .
 
 
 ###  http://dbpedia.org/resource/Cleveland
@@ -205,29 +207,29 @@ dbr:Colorado rdf:type owl:NamedIndividual ,
 
 ###  http://dbpedia.org/resource/Columbia_Icefield
 dbr:Columbia_Icefield rdf:type owl:NamedIndividual ,
-                               <http://dbpedia.org/ontology/ProtectedArea> .
+                               dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Cuivre_River_State_Park
 dbr:Cuivre_River_State_Park rdf:type owl:NamedIndividual ,
-                                     <http://dbpedia.org/ontology/ProtectedArea> .
+                                     dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Dallas
 dbr:Dallas rdf:type owl:NamedIndividual ,
                     dbr:City ;
-           <http://purl.obolibrary.org/obo/RO_0001025> dbr:Texas .
+           obo:RO_0001025 dbr:Texas .
 
 
 ###  http://dbpedia.org/resource/Denver
 dbr:Denver rdf:type owl:NamedIndividual ,
                     dbr:City ;
-           <http://purl.obolibrary.org/obo/RO_0001025> dbr:Colorado .
+           obo:RO_0001025 dbr:Colorado .
 
 
 ###  http://dbpedia.org/resource/Dinosaur_Provincial_Park
 dbr:Dinosaur_Provincial_Park rdf:type owl:NamedIndividual ,
-                                      <http://dbpedia.org/ontology/ProtectedArea> .
+                                      dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Dresden
@@ -237,19 +239,19 @@ dbr:Dresden rdf:type owl:NamedIndividual ,
 
 ###  http://dbpedia.org/resource/Dumnonia
 dbr:Dumnonia rdf:type owl:NamedIndividual ,
-                      <http://dbpedia.org/ontology/Country> .
+                      dbo:Country .
 
 
 ###  http://dbpedia.org/resource/East_Germany
 dbr:East_Germany rdf:type owl:NamedIndividual ,
-                          <http://dbpedia.org/ontology/Country> .
+                          dbo:Country .
 
 
 ###  http://dbpedia.org/resource/Erlangen
 dbr:Erlangen rdf:type owl:NamedIndividual ,
                       dbr:City ;
              :is_near dbr:Heidelberg ;
-             <http://purl.obolibrary.org/obo/RO_0001025> dbr:Germany .
+             obo:RO_0001025 dbr:Germany .
 
 
 ###  http://dbpedia.org/resource/Florida
@@ -259,27 +261,27 @@ dbr:Florida rdf:type owl:NamedIndividual ,
 
 ###  http://dbpedia.org/resource/Frankfurt_Airport
 dbr:Frankfurt_Airport rdf:type owl:NamedIndividual ,
-                               <http://dbpedia.org/ontology/Airport> .
+                               dbo:Airport .
 
 
 ###  http://dbpedia.org/resource/George_Bush_Intercontinental_Airport
 dbr:George_Bush_Intercontinental_Airport rdf:type owl:NamedIndividual ,
-                                                  <http://dbpedia.org/ontology/Airport> .
+                                                  dbo:Airport .
 
 
 ###  http://dbpedia.org/resource/Germany
 dbr:Germany rdf:type owl:NamedIndividual ,
-                     <http://dbpedia.org/ontology/Country> .
+                     dbo:Country .
 
 
 ###  http://dbpedia.org/resource/Grand_Canyon
 dbr:Grand_Canyon rdf:type owl:NamedIndividual ,
-                          <http://dbpedia.org/ontology/ProtectedArea> .
+                          dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Ha_Ha_Tonka_State_Park
 dbr:Ha_Ha_Tonka_State_Park rdf:type owl:NamedIndividual ,
-                                    <http://dbpedia.org/ontology/ProtectedArea> .
+                                    dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Hawaii
@@ -290,24 +292,24 @@ dbr:Hawaii rdf:type owl:NamedIndividual ,
 ###  http://dbpedia.org/resource/Heidelberg
 dbr:Heidelberg rdf:type owl:NamedIndividual ,
                         dbr:City ;
-               <http://purl.obolibrary.org/obo/RO_0001025> dbr:Germany .
+               obo:RO_0001025 dbr:Germany .
 
 
 ###  http://dbpedia.org/resource/Hoover_Dam
 dbr:Hoover_Dam rdf:type owl:NamedIndividual ,
-                        <http://dbpedia.org/ontology/Infrastructure> .
+                        dbo:Infrastructure .
 
 
 ###  http://dbpedia.org/resource/Houston
 dbr:Houston rdf:type owl:NamedIndividual ,
                      dbr:City ;
-            <http://purl.obolibrary.org/obo/RO_0001025> dbr:Texas .
+            obo:RO_0001025 dbr:Texas .
 
 
 ###  http://dbpedia.org/resource/Houston_Heights
 dbr:Houston_Heights rdf:type owl:NamedIndividual ,
-                             <http://dbpedia.org/ontology/CityDistrict> ;
-                    <http://purl.obolibrary.org/obo/RO_0001025> dbr:Houston .
+                             dbo:CityDistrict ;
+                    obo:RO_0001025 dbr:Houston .
 
 
 ###  http://dbpedia.org/resource/Illinois
@@ -318,41 +320,41 @@ dbr:Illinois rdf:type owl:NamedIndividual ,
 
 ###  http://dbpedia.org/resource/India
 dbr:India rdf:type owl:NamedIndividual ,
-                   <http://dbpedia.org/ontology/Country> .
+                   dbo:Country .
 
 
 ###  http://dbpedia.org/resource/Interstate_10
 dbr:Interstate_10 rdf:type owl:NamedIndividual ,
-                           <http://dbpedia.org/ontology/Road> .
+                           dbo:Road .
 
 
 ###  http://dbpedia.org/resource/Interstate_70
 dbr:Interstate_70 rdf:type owl:NamedIndividual ,
-                           <http://dbpedia.org/ontology/Road> .
+                           dbo:Road .
 
 
 ###  http://dbpedia.org/resource/Israel
 dbr:Israel rdf:type owl:NamedIndividual ,
-                    <http://dbpedia.org/ontology/Country> .
+                    dbo:Country .
 
 
 ###  http://dbpedia.org/resource/Jasper_National_Park
 dbr:Jasper_National_Park rdf:type owl:NamedIndividual ,
-                                  <http://dbpedia.org/ontology/ProtectedArea> .
+                                  dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Jesse_Hall
 dbr:Jesse_Hall rdf:type owl:NamedIndividual ,
-                        <http://dbpedia.org/ontology/Venue> ;
-               <http://purl.obolibrary.org/obo/RO_0001025> <http://dbpedia.org/resource/Columbia,_Missouri> ;
-               <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/wiki/Jesse_Hall"^^xsd:anyURI .
+                        dbo:Venue ;
+               obo:RO_0001025 <http://dbpedia.org/resource/Columbia,_Missouri> ;
+               obo:IAO_0000115 "https://en.wikipedia.org/wiki/Jesse_Hall"^^xsd:anyURI .
 
 
 ###  http://dbpedia.org/resource/Key_West
 dbr:Key_West rdf:type owl:NamedIndividual ,
-                      <http://dbpedia.org/ontology/Island> ,
+                      dbo:Island ,
                       dbr:City ;
-             <http://purl.obolibrary.org/obo/BFO_0000050> dbr:Florida .
+             obo:BFO_0000050 dbr:Florida .
 
 
 ###  http://dbpedia.org/resource/Kingdom_of_Gwent
@@ -365,19 +367,19 @@ dbr:Kingdom_of_Powys rdf:type owl:NamedIndividual .
 
 ###  http://dbpedia.org/resource/Lake_Tahoe
 dbr:Lake_Tahoe rdf:type owl:NamedIndividual ,
-                        <http://dbpedia.org/ontology/ProtectedArea> .
+                        dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Las_Vegas
 dbr:Las_Vegas rdf:type owl:NamedIndividual ,
                        dbr:City ;
-              <http://purl.obolibrary.org/obo/BFO_0000050> dbr:Nevada .
+              obo:BFO_0000050 dbr:Nevada .
 
 
 ###  http://dbpedia.org/resource/Los_Angeles
 dbr:Los_Angeles rdf:type owl:NamedIndividual ,
                          dbr:City ;
-                <http://purl.obolibrary.org/obo/BFO_0000050> dbr:California .
+                obo:BFO_0000050 dbr:California .
 
 
 ###  http://dbpedia.org/resource/Louisiana
@@ -387,46 +389,46 @@ dbr:Louisiana rdf:type owl:NamedIndividual ,
 
 ###  http://dbpedia.org/resource/Merced_River
 dbr:Merced_River rdf:type owl:NamedIndividual ,
-                          <http://dbpedia.org/ontology/ProtectedArea> .
+                          dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Meteor_Crater
 dbr:Meteor_Crater rdf:type owl:NamedIndividual ,
-                           <http://dbpedia.org/ontology/ProtectedArea> .
+                           dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Mexico
 dbr:Mexico rdf:type owl:NamedIndividual ,
-                    <http://dbpedia.org/ontology/Country> .
+                    dbo:Country .
 
 
 ###  http://dbpedia.org/resource/Miami
 dbr:Miami rdf:type owl:NamedIndividual ,
                    dbr:City ;
-          <http://purl.obolibrary.org/obo/BFO_0000050> dbr:Florida .
+          obo:BFO_0000050 dbr:Florida .
 
 
 ###  http://dbpedia.org/resource/Missouri
 dbr:Missouri rdf:type owl:NamedIndividual ,
                       dbr:U.S._state ;
-             <http://purl.obolibrary.org/obo/RO_0001025> dbr:United_States .
+             obo:RO_0001025 dbr:United_States .
 
 
 ###  http://dbpedia.org/resource/Mont-Saint-Michel
 dbr:Mont-Saint-Michel rdf:type owl:NamedIndividual ,
-                               <http://dbpedia.org/ontology/Island> ;
+                               dbo:Island ;
                       rdfs:label "Ynys Trebes" .
 
 
 ###  http://dbpedia.org/resource/Montreal
 dbr:Montreal rdf:type owl:NamedIndividual ,
                       dbr:City ;
-             <http://purl.obolibrary.org/obo/BFO_0000050> dbr:Canada .
+             obo:BFO_0000050 dbr:Canada .
 
 
 ###  http://dbpedia.org/resource/Nazi_Germany
 dbr:Nazi_Germany rdf:type owl:NamedIndividual ,
-                          <http://dbpedia.org/ontology/Country> .
+                          dbo:Country .
 
 
 ###  http://dbpedia.org/resource/Nevada
@@ -437,7 +439,7 @@ dbr:Nevada rdf:type owl:NamedIndividual ,
 ###  http://dbpedia.org/resource/New_Orleans
 dbr:New_Orleans rdf:type owl:NamedIndividual ,
                          dbr:City ;
-                <http://purl.obolibrary.org/obo/RO_0001025> dbr:Louisiana .
+                obo:RO_0001025 dbr:Louisiana .
 
 
 ###  http://dbpedia.org/resource/New_York_City
@@ -447,13 +449,13 @@ dbr:New_York_City rdf:type owl:NamedIndividual ,
 
 ###  http://dbpedia.org/resource/Newark_Liberty_International_Airport
 dbr:Newark_Liberty_International_Airport rdf:type owl:NamedIndividual ,
-                                                  <http://dbpedia.org/ontology/Airport> .
+                                                  dbo:Airport .
 
 
 ###  http://dbpedia.org/resource/Newcastle_upon_Tyne
 dbr:Newcastle_upon_Tyne rdf:type owl:NamedIndividual ,
                                  dbr:City ;
-                        <http://purl.obolibrary.org/obo/RO_0001025> dbr:United_Kingdom .
+                        obo:RO_0001025 dbr:United_Kingdom .
 
 
 ###  http://dbpedia.org/resource/Passau
@@ -463,70 +465,70 @@ dbr:Passau rdf:type owl:NamedIndividual ,
 
 ###  http://dbpedia.org/resource/Rock_Bridge_Memorial_State_Park
 dbr:Rock_Bridge_Memorial_State_Park rdf:type owl:NamedIndividual ,
-                                             <http://dbpedia.org/ontology/ProtectedArea> .
+                                             dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Rockwoods_Reservation
 dbr:Rockwoods_Reservation rdf:type owl:NamedIndividual ,
-                                   <http://dbpedia.org/ontology/ProtectedArea> .
+                                   dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Russia
 dbr:Russia rdf:type owl:NamedIndividual ,
-                    <http://dbpedia.org/ontology/Country> .
+                    dbo:Country .
 
 
 ###  http://dbpedia.org/resource/San_Antonio
 dbr:San_Antonio rdf:type owl:NamedIndividual ,
                          dbr:City ;
                 :is_near <http://dbpedia.org/resource/Austin,_Texas> ;
-                <http://purl.obolibrary.org/obo/BFO_0000050> dbr:Texas .
+                obo:BFO_0000050 dbr:Texas .
 
 
 ###  http://dbpedia.org/resource/San_Diego
 dbr:San_Diego rdf:type owl:NamedIndividual ,
                        dbr:City ;
-              <http://purl.obolibrary.org/obo/BFO_0000050> dbr:California .
+              obo:BFO_0000050 dbr:California .
 
 
 ###  http://dbpedia.org/resource/San_Francisco
 dbr:San_Francisco rdf:type owl:NamedIndividual ,
                            dbr:City ;
                   :is_near <http://dbpedia.org/resource/Oakland,_California> ;
-                  <http://purl.obolibrary.org/obo/BFO_0000050> dbr:California .
+                  obo:BFO_0000050 dbr:California .
 
 
 ###  http://dbpedia.org/resource/San_Francisco_International_Airport
 dbr:San_Francisco_International_Airport rdf:type owl:NamedIndividual ,
-                                                 <http://dbpedia.org/ontology/Airport> .
+                                                 dbo:Airport .
 
 
 ###  http://dbpedia.org/resource/Seattle
 dbr:Seattle rdf:type owl:NamedIndividual ,
                      dbr:City ;
             :is_near dbr:Vancouver ;
-            <http://purl.obolibrary.org/obo/BFO_0000050> dbr:Washington .
+            obo:BFO_0000050 dbr:Washington .
 
 
 ###  http://dbpedia.org/resource/Smithsonian_Institution
 dbr:Smithsonian_Institution rdf:type owl:NamedIndividual ,
-                                     <http://dbpedia.org/ontology/Building> .
+                                     dbo:Building .
 
 
 ###  http://dbpedia.org/resource/St._Louis
 dbr:St._Louis rdf:type owl:NamedIndividual ,
                        dbr:City ;
-              <http://purl.obolibrary.org/obo/RO_0001025> dbr:Missouri .
+              obo:RO_0001025 dbr:Missouri .
 
 
 ###  http://dbpedia.org/resource/St._Louis_Lambert_International_Airport
 dbr:St._Louis_Lambert_International_Airport rdf:type owl:NamedIndividual ,
-                                                     <http://dbpedia.org/ontology/Airport> .
+                                                     dbo:Airport .
 
 
 ###  http://dbpedia.org/resource/Taum_Sauk_Mountain_State_Park
 dbr:Taum_Sauk_Mountain_State_Park rdf:type owl:NamedIndividual ,
-                                           <http://dbpedia.org/ontology/ProtectedArea> .
+                                           dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Texas
@@ -538,40 +540,40 @@ dbr:Texas rdf:type owl:NamedIndividual ,
 ###  http://dbpedia.org/resource/Toronto
 dbr:Toronto rdf:type owl:NamedIndividual ,
                      dbr:City ;
-            <http://purl.obolibrary.org/obo/BFO_0000050> dbr:Canada .
+            obo:BFO_0000050 dbr:Canada .
 
 
 ###  http://dbpedia.org/resource/U.S._Route_61
 dbr:U.S._Route_61 rdf:type owl:NamedIndividual ,
-                           <http://dbpedia.org/ontology/Road> .
+                           dbo:Road .
 
 
 ###  http://dbpedia.org/resource/U.S._Route_66
 dbr:U.S._Route_66 rdf:type owl:NamedIndividual ,
-                           <http://dbpedia.org/ontology/Road> .
+                           dbo:Road .
 
 
 ###  http://dbpedia.org/resource/United_Kingdom
 dbr:United_Kingdom rdf:type owl:NamedIndividual ,
-                            <http://dbpedia.org/ontology/Country> ,
-                            <http://dbpedia.org/ontology/Island> .
+                            dbo:Country ,
+                            dbo:Island .
 
 
 ###  http://dbpedia.org/resource/United_States
 dbr:United_States rdf:type owl:NamedIndividual ,
-                           <http://dbpedia.org/ontology/Country> .
+                           dbo:Country .
 
 
 ###  http://dbpedia.org/resource/Vancouver
 dbr:Vancouver rdf:type owl:NamedIndividual ,
                        dbr:City ;
               :is_near dbr:Seattle ;
-              <http://purl.obolibrary.org/obo/BFO_0000050> dbr:Canada .
+              obo:BFO_0000050 dbr:Canada .
 
 
 ###  http://dbpedia.org/resource/Vietnam
 dbr:Vietnam rdf:type owl:NamedIndividual ,
-                     <http://dbpedia.org/ontology/Country> .
+                     dbo:Country .
 
 
 ###  http://dbpedia.org/resource/Washington
@@ -581,36 +583,36 @@ dbr:Washington rdf:type owl:NamedIndividual ,
 
 ###  http://dbpedia.org/resource/Weimar_Republic
 dbr:Weimar_Republic rdf:type owl:NamedIndividual ,
-                             <http://dbpedia.org/ontology/Country> .
+                             dbo:Country .
 
 
 ###  http://dbpedia.org/resource/West_Germany
 dbr:West_Germany rdf:type owl:NamedIndividual ,
-                          <http://dbpedia.org/ontology/Country> .
+                          dbo:Country .
 
 
 ###  http://dbpedia.org/resource/Yosemite_National_Park
 dbr:Yosemite_National_Park rdf:type owl:NamedIndividual ,
-                                    <http://dbpedia.org/ontology/ProtectedArea> .
+                                    dbo:ProtectedArea .
 
 
 ###  http://dbpedia.org/resource/Zurich_Airport
 dbr:Zurich_Airport rdf:type owl:NamedIndividual ,
-                            <http://dbpedia.org/ontology/Airport> .
+                            dbo:Airport .
 
 
 ###  http://dbpedia.org/resource/Anaheim,_California
 <http://dbpedia.org/resource/Anaheim,_California> rdf:type owl:NamedIndividual ,
                                                            dbr:City ;
-                                                  <http://purl.obolibrary.org/obo/RO_0001025> dbr:California ;
-                                                  <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/wiki/Anaheim,_California"^^xsd:anyURI .
+                                                  obo:RO_0001025 dbr:California ;
+                                                  obo:IAO_0000115 "https://en.wikipedia.org/wiki/Anaheim,_California"^^xsd:anyURI .
 
 
 ###  http://dbpedia.org/resource/Austin,_Texas
 <http://dbpedia.org/resource/Austin,_Texas> rdf:type owl:NamedIndividual ,
                                                      dbr:City ;
-                                            <http://purl.obolibrary.org/obo/RO_0001025> dbr:Texas ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/wiki/Austin,_Texas"^^xsd:anyURI .
+                                            obo:RO_0001025 dbr:Texas ;
+                                            obo:IAO_0000115 "https://en.wikipedia.org/wiki/Austin,_Texas"^^xsd:anyURI .
 
 
 ###  http://dbpedia.org/resource/Baden,_Switzerland
@@ -621,33 +623,33 @@ dbr:Zurich_Airport rdf:type owl:NamedIndividual ,
 ###  http://dbpedia.org/resource/Bangor,_Maine
 <http://dbpedia.org/resource/Bangor,_Maine> rdf:type owl:NamedIndividual ,
                                                      dbr:City ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/wiki/Bangor,_Maine"^^xsd:anyURI .
+                                            obo:IAO_0000115 "https://en.wikipedia.org/wiki/Bangor,_Maine"^^xsd:anyURI .
 
 
 ###  http://dbpedia.org/resource/Castro_District,_San_Francisco
 <http://dbpedia.org/resource/Castro_District,_San_Francisco> rdf:type owl:NamedIndividual ,
-                                                                      <http://dbpedia.org/ontology/CityDistrict> ;
-                                                             <http://purl.obolibrary.org/obo/RO_0001025> dbr:San_Francisco .
+                                                                      dbo:CityDistrict ;
+                                                             obo:RO_0001025 dbr:San_Francisco .
 
 
 ###  http://dbpedia.org/resource/Columbia,_Missouri
 <http://dbpedia.org/resource/Columbia,_Missouri> rdf:type owl:NamedIndividual ,
                                                           dbr:City ;
-                                                 <http://purl.obolibrary.org/obo/RO_0001025> dbr:Missouri .
+                                                 obo:RO_0001025 dbr:Missouri .
 
 
 ###  http://dbpedia.org/resource/Concord,_California
 <http://dbpedia.org/resource/Concord,_California> rdf:type owl:NamedIndividual ,
                                                            dbr:City ;
                                                   :is_near <http://dbpedia.org/resource/Oakland,_California> ;
-                                                  <http://purl.obolibrary.org/obo/RO_0001025> dbr:California .
+                                                  obo:RO_0001025 dbr:California .
 
 
 ###  http://dbpedia.org/resource/Galveston,_Texas
 <http://dbpedia.org/resource/Galveston,_Texas> rdf:type owl:NamedIndividual ,
                                                         dbr:City ;
                                                :is_near dbr:Houston ;
-                                               <http://purl.obolibrary.org/obo/RO_0001025> dbr:Texas .
+                                               obo:RO_0001025 dbr:Texas .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://dbpedia.org/resource/Galveston,_Texas> ;
@@ -664,49 +666,49 @@ dbr:Zurich_Airport rdf:type owl:NamedIndividual ,
 
 ###  http://dbpedia.org/resource/Kansas_City,_Missouri
 <http://dbpedia.org/resource/Kansas_City,_Missouri> rdf:type owl:NamedIndividual ;
-                                                    <http://purl.obolibrary.org/obo/BFO_0000050> dbr:Missouri .
+                                                    obo:BFO_0000050 dbr:Missouri .
 
 
 ###  http://dbpedia.org/resource/Kingdom_of_Israel_(Samaria)
 <http://dbpedia.org/resource/Kingdom_of_Israel_(Samaria)> rdf:type owl:NamedIndividual ,
-                                                                   <http://dbpedia.org/ontology/Country> .
+                                                                   dbo:Country .
 
 
 ###  http://dbpedia.org/resource/Maplewood,_Missouri
 <http://dbpedia.org/resource/Maplewood,_Missouri> rdf:type owl:NamedIndividual ,
                                                            dbr:City ;
                                                   :is_near dbr:St._Louis ;
-                                                  <http://purl.obolibrary.org/obo/RO_0001025> dbr:Missouri .
+                                                  obo:RO_0001025 dbr:Missouri .
 
 
 ###  http://dbpedia.org/resource/Maryland_Heights,_Missouri
 <http://dbpedia.org/resource/Maryland_Heights,_Missouri> rdf:type owl:NamedIndividual ,
                                                                   dbr:City ;
                                                          :is_near <http://dbpedia.org/resource/Richmond_Heights,_Missouri> ;
-                                                         <http://purl.obolibrary.org/obo/RO_0001025> dbr:Missouri .
+                                                         obo:RO_0001025 dbr:Missouri .
 
 
 ###  http://dbpedia.org/resource/Mission_District,_San_Francisco
 <http://dbpedia.org/resource/Mission_District,_San_Francisco> rdf:type owl:NamedIndividual ,
-                                                                       <http://dbpedia.org/ontology/CityDistrict> ;
-                                                              <http://purl.obolibrary.org/obo/BFO_0000050> dbr:San_Francisco .
+                                                                       dbo:CityDistrict ;
+                                                              obo:BFO_0000050 dbr:San_Francisco .
 
 
 ###  http://dbpedia.org/resource/O%27Hare_International_Airport
 <http://dbpedia.org/resource/O%27Hare_International_Airport> rdf:type owl:NamedIndividual ,
-                                                                      <http://dbpedia.org/ontology/Airport> .
+                                                                      dbo:Airport .
 
 
 ###  http://dbpedia.org/resource/Oakland,_California
 <http://dbpedia.org/resource/Oakland,_California> rdf:type owl:NamedIndividual ,
                                                            dbr:City ;
-                                                  <http://purl.obolibrary.org/obo/BFO_0000050> dbr:California .
+                                                  obo:BFO_0000050 dbr:California .
 
 
 ###  http://dbpedia.org/resource/Orlando,_Florida
 <http://dbpedia.org/resource/Orlando,_Florida> rdf:type owl:NamedIndividual ,
                                                         dbr:City ;
-                                               <http://purl.obolibrary.org/obo/BFO_0000050> dbr:Florida .
+                                               obo:BFO_0000050 dbr:Florida .
 
 
 ###  http://dbpedia.org/resource/Palm_Springs,_California
@@ -716,7 +718,7 @@ dbr:Zurich_Airport rdf:type owl:NamedIndividual ,
 ###  http://dbpedia.org/resource/Pensacola,_Florida
 <http://dbpedia.org/resource/Pensacola,_Florida> rdf:type owl:NamedIndividual ,
                                                           dbr:City ;
-                                                 <http://purl.obolibrary.org/obo/BFO_0000050> dbr:Florida .
+                                                 obo:BFO_0000050 dbr:Florida .
 
 
 ###  http://dbpedia.org/resource/Princeton,_New_Jersey
@@ -734,36 +736,36 @@ dbr:Zurich_Airport rdf:type owl:NamedIndividual ,
                                                                   dbr:City ;
                                                          :is_near dbr:St._Louis ,
                                                                   <http://dbpedia.org/resource/Maplewood,_Missouri> ;
-                                                         <http://purl.obolibrary.org/obo/RO_0001025> dbr:Missouri .
+                                                         obo:RO_0001025 dbr:Missouri .
 
 
 ###  http://dbpedia.org/resource/San_Francisco–Oakland_Bay_Bridge
 <http://dbpedia.org/resource/San_Francisco–Oakland_Bay_Bridge> rdf:type owl:NamedIndividual ,
-                                                                        <http://dbpedia.org/ontology/Bridge> .
+                                                                        dbo:Bridge .
 
 
 ###  http://dbpedia.org/resource/Soulard,_St._Louis
 <http://dbpedia.org/resource/Soulard,_St._Louis> rdf:type owl:NamedIndividual ,
-                                                          <http://dbpedia.org/ontology/CityDistrict> ;
-                                                 <http://purl.obolibrary.org/obo/BFO_0000050> dbr:St._Louis .
+                                                          dbo:CityDistrict ;
+                                                 obo:BFO_0000050 dbr:St._Louis .
 
 
 ###  http://dbpedia.org/resource/St._Charles,_Missouri
 <http://dbpedia.org/resource/St._Charles,_Missouri> rdf:type owl:NamedIndividual ,
                                                              dbr:City ;
-                                                    <http://purl.obolibrary.org/obo/RO_0001025> dbr:Missouri .
+                                                    obo:RO_0001025 dbr:Missouri .
 
 
 ###  http://dbpedia.org/resource/Sunnyvale,_California
 <http://dbpedia.org/resource/Sunnyvale,_California> rdf:type owl:NamedIndividual ,
                                                              dbr:City ;
-                                                    <http://purl.obolibrary.org/obo/BFO_0000050> dbr:California .
+                                                    obo:BFO_0000050 dbr:California .
 
 
 ###  http://dbpedia.org/resource/Washington,_D.C.
 <http://dbpedia.org/resource/Washington,_D.C.> rdf:type owl:NamedIndividual ,
                                                         dbr:City ;
-                                               <http://purl.obolibrary.org/obo/BFO_0000050> dbr:United_States .
+                                               obo:BFO_0000050 dbr:United_States .
 
 
 ###  http://dbpedia.org/resource/Wentzville,_Missouri
@@ -771,24 +773,24 @@ dbr:Zurich_Airport rdf:type owl:NamedIndividual ,
                                                             dbr:City ;
                                                    :is_near dbr:St._Louis ,
                                                             <http://dbpedia.org/resource/Columbia,_Missouri> ;
-                                                   <http://purl.obolibrary.org/obo/RO_0001025> dbr:Missouri .
+                                                   obo:RO_0001025 dbr:Missouri .
 
 
-###  http://dg1an3.net/ontologies/2021/8/geography#Neighborhood_EastCampus
+###  http://dg1an3.github.io/ontology/geography#Neighborhood_EastCampus
 :Neighborhood_EastCampus rdf:type owl:NamedIndividual ,
-                                  <http://dbpedia.org/ontology/CityDistrict> ;
-                         <http://purl.obolibrary.org/obo/RO_0001025> <http://dbpedia.org/resource/Columbia,_Missouri> .
+                                  dbo:CityDistrict ;
+                         obo:RO_0001025 <http://dbpedia.org/resource/Columbia,_Missouri> .
 
 
-###  http://dg1an3.net/ontologies/2021/8/geography#Neighborhood_Fairacres
+###  http://dg1an3.github.io/ontology/geography#Neighborhood_Fairacres
 :Neighborhood_Fairacres rdf:type owl:NamedIndividual ,
-                                 <http://dbpedia.org/ontology/CityDistrict> ;
-                        <http://purl.obolibrary.org/obo/RO_0001025> <http://dbpedia.org/resource/Wentzville,_Missouri> .
+                                 dbo:CityDistrict ;
+                        obo:RO_0001025 <http://dbpedia.org/resource/Wentzville,_Missouri> .
 
 
 ###  https://dbpedia.org/resource/Glastonbury_Tor
 <https://dbpedia.org/resource/Glastonbury_Tor> rdf:type owl:NamedIndividual ,
-                                                        <http://dbpedia.org/ontology/Island> ;
+                                                        dbo:Island ;
                                                rdfs:label "Ynys Wydryn" .
 
 
