@@ -348,6 +348,15 @@ xsd:date rdf:type rdfs:Datatype .
 #    Individuals
 #################################################################
 
+###  http://dbpedia.org/resourcThe_Hitchhiker%27s_Guide_to_the_Galaxy_(fictional)
+<http://dbpedia.org/resourcThe_Hitchhiker%27s_Guide_to_the_Galaxy_(fictional)> rdf:type owl:NamedIndividual ,
+                                                                                        :Novel ;
+                                                                               :has_character <http://dbpedia.org/resource/Arthur_Dent> ;
+                                                                               <http://purl.org/dc/elements/1.1/creator> :Person_DouglasAdams ;
+                                                                               <http://purl.org/dc/elements/1.1/date> "1979-10-12T00:00:00"^^xsd:dateTime ;
+                                                                               <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy"^^xsd:anyURI .
+
+
 ###  http://dbpedia.org/resource/A_Game_of_Thrones
 <http://dbpedia.org/resource/A_Game_of_Thrones> rdf:type owl:NamedIndividual .
 
@@ -371,6 +380,11 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 ###  http://dbpedia.org/resource/Alfred_the_Great
 <http://dbpedia.org/resource/Alfred_the_Great> rdf:type owl:NamedIndividual ;
                                                <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/Alfred_the_Great"^^xsd:anyURI .
+
+
+###  http://dbpedia.org/resource/Anglesey
+<http://dbpedia.org/resource/Anglesey> rdf:type owl:NamedIndividual ;
+                                       <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/British_Isles> .
 
 
 ###  http://dbpedia.org/resource/Arthur_Dent
@@ -414,6 +428,18 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                                                      :fictional_character .
 
 
+###  http://dbpedia.org/resource/British_Isles
+<http://dbpedia.org/resource/British_Isles> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.obolibrary.org/obo/BFO_0000009> ;
+                                            <http://purl.obolibrary.org/obo/BFO_0000050> :Place_WesternEurope .
+
+
+###  http://dbpedia.org/resource/Caribbean_Sea
+<http://dbpedia.org/resource/Caribbean_Sea> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.obolibrary.org/obo/BFO_0000009> ;
+                                            <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/Caribbean_Sea"^^xsd:anyURI .
+
+
 ###  http://dbpedia.org/resource/Count_Zero
 <http://dbpedia.org/resource/Count_Zero> rdf:type owl:NamedIndividual ,
                                                   :Novel ;
@@ -439,6 +465,13 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                                                  <http://purl.org/dc/elements/1.1/title> "Dragonfly in Amber" .
 
 
+###  http://dbpedia.org/resource/Dumnonia
+<http://dbpedia.org/resource/Dumnonia> rdf:type owl:NamedIndividual ,
+                                                <http://purl.obolibrary.org/obo/BFO_0000009> ;
+                                       <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/British_Isles> ;
+                                       rdfs:comment "https://en.wikipedia.org/wiki/Dumnonia"^^xsd:anyURI .
+
+
 ###  http://dbpedia.org/resource/E._R._Eddison
 <http://dbpedia.org/resource/E._R._Eddison> rdf:type owl:NamedIndividual ,
                                                      <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
@@ -456,6 +489,12 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 <http://dbpedia.org/resource/George_R._R._Martin> rdf:type owl:NamedIndividual .
 
 
+###  http://dbpedia.org/resource/Great_Alamance_Creek
+<http://dbpedia.org/resource/Great_Alamance_Creek> rdf:type owl:NamedIndividual ,
+                                                            <http://purl.obolibrary.org/obo/BFO_0000009> ;
+                                                   <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/North_Carolina> .
+
+
 ###  http://dbpedia.org/resource/Isaac_Asimov
 <http://dbpedia.org/resource/Isaac_Asimov> rdf:type owl:NamedIndividual ,
                                                     <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
@@ -464,6 +503,12 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 
 ###  http://dbpedia.org/resource/J._R._R._Tolkien
 <http://dbpedia.org/resource/J._R._R._Tolkien> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Jamaica
+<http://dbpedia.org/resource/Jamaica> rdf:type owl:NamedIndividual ,
+                                               <http://purl.obolibrary.org/obo/BFO_0000009> ;
+                                      <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Caribbean_Sea> .
 
 
 ###  http://dbpedia.org/resource/King_Arthur
@@ -481,12 +526,23 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                                                     :fictional_geographic_place .
 
 
+###  http://dbpedia.org/resource/Mont-Saint-Michel
+<http://dbpedia.org/resource/Mont-Saint-Michel> rdf:type owl:NamedIndividual ,
+                                                         :fictional_geographic_place .
+
+
 ###  http://dbpedia.org/resource/Mordred
 <http://dbpedia.org/resource/Mordred> rdf:type owl:NamedIndividual .
 
 
 ###  http://dbpedia.org/resource/Morgan_le_Fay
 <http://dbpedia.org/resource/Morgan_le_Fay> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/North_Carolina
+<http://dbpedia.org/resource/North_Carolina> rdf:type owl:NamedIndividual ,
+                                                      :fictional_geographic_place ;
+                                             rdfs:comment "as in Outlander"^^xsd:anyURI .
 
 
 ###  http://dbpedia.org/resource/Randall_Flagg
@@ -542,24 +598,35 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                                               rdfs:comment "Trained Arthur; adopted Derfil; lover of Nimue" .
 
 
+###  http://dbpedia.org/resource/Rose_Hall,_Montego_Bay
+<http://dbpedia.org/resource/Rose_Hall,_Montego_Bay> rdf:type owl:NamedIndividual ;
+                                                     <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Jamaica> .
+
+
 ###  http://dbpedia.org/resource/The_Doctor_(Doctor_Who)
 <http://dbpedia.org/resource/The_Doctor_(Doctor_Who)> rdf:type owl:NamedIndividual ,
                                                                :fictional_character .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Army_BenoicArmy
-:Army_BenoicArmy rdf:type owl:NamedIndividual ,
-                          :MilitaryOrganization .
+###  http://dg1an3.github.io/ontology/books#Army_BenoicArmy
+<http://dg1an3.github.io/ontology/books#Army_BenoicArmy> rdf:type owl:NamedIndividual ,
+                                                                  :MilitaryOrganization .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Birth_of_Mordred
-:Birth_of_Mordred rdf:type owl:NamedIndividual ,
-                           :birth ;
-                  <http://purl.org/dc/elements/1.1/type> <http://purl.org/dc/dcmitype/Event> .
+###  http://dg1an3.github.io/ontology/books#Birth_of_Mordred
+<http://dg1an3.github.io/ontology/books#Birth_of_Mordred> rdf:type owl:NamedIndividual ,
+                                                                   :birth ;
+                                                          <http://purl.org/dc/elements/1.1/type> <http://purl.org/dc/dcmitype/Event> .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Car_Buick8
-:Car_Buick8 rdf:type owl:NamedIndividual .
+###  http://dg1an3.github.io/ontology/books#Car_Buick8
+<http://dg1an3.github.io/ontology/books#Car_Buick8> rdf:type owl:NamedIndividual .
+
+
+###  http://dg1an3.github.io/ontology/books#Place_Demonland
+<http://dg1an3.github.io/ontology/books#Place_Demonland> rdf:type owl:NamedIndividual ,
+                                                                  :fictional_geographic_place ;
+                                                         <http://purl.obolibrary.org/obo/BFO_0000050> :Place_Mercury_in_the_Worm_Ouroboros .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Character_Alice
@@ -715,7 +782,7 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Character_LordJuss
 :Character_LordJuss rdf:type owl:NamedIndividual ;
-                    owl:topObjectProperty :Place_Demonland .
+                    owl:topObjectProperty <http://dg1an3.github.io/ontology/books#Place_Demonland> .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Character_MurtaghFraser
@@ -977,7 +1044,7 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#NovelSeries_TheHitchhikersGuideToTheGalaxy
 :NovelSeries_TheHitchhikersGuideToTheGalaxy rdf:type owl:NamedIndividual ;
-                                            <http://purl.obolibrary.org/obo/BFO_0000051> :Novel_TheHitchikersGuideToTheGalaxy .
+                                            <http://purl.obolibrary.org/obo/BFO_0000051> <http://dbpedia.org/resourcThe_Hitchhiker%27s_Guide_to_the_Galaxy_(fictional)> .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#NovelSeries_TheLastKingdom
@@ -1032,7 +1099,7 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                                   :Event_BatAutopsy ,
                                   :Event_FirstBuick8Lightquake ,
                                   :Event_FirstBuick8Miscarriage ;
-                   :has_character :Car_Buick8 ,
+                   :has_character <http://dg1an3.github.io/ontology/books#Car_Buick8> ,
                                   :Character_CurtisWilcox ,
                                   :Character_EnnisRafferty ,
                                   :Character_NedWilcox ,
@@ -1123,15 +1190,6 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                      <http://purl.org/dc/elements/1.1/date> "1982-06-10T00:00:00"^^xsd:dateTime ;
                      <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/The_Dark_Tower:_The_Gunslinger"^^xsd:anyURI ;
                      <http://purl.org/dc/elements/1.1/title> "The Dark Tower: The Gunslinger" .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Novel_TheHitchikersGuideToTheGalaxy
-:Novel_TheHitchikersGuideToTheGalaxy rdf:type owl:NamedIndividual ,
-                                              :Novel ;
-                                     :has_character <http://dbpedia.org/resource/Arthur_Dent> ;
-                                     <http://purl.org/dc/elements/1.1/creator> :Person_DouglasAdams ;
-                                     <http://purl.org/dc/elements/1.1/date> "1979-10-12T00:00:00"^^xsd:dateTime ;
-                                     <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Novel_TheHobbit
@@ -1247,10 +1305,10 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Novel_TheWinterKing
 :Novel_TheWinterKing rdf:type owl:NamedIndividual ,
                               :Novel ;
-                     <http://purl.obolibrary.org/obo/IAO_0000142> :Place_CaerCadarn ,
-                                                                  :Place_Ynys_Mor ,
-                                                                  :Place_Ynys_Trebes ;
-                     :depicts_event :Birth_of_Mordred ,
+                     <http://purl.obolibrary.org/obo/IAO_0000142> <http://dbpedia.org/resource/Anglesey> ,
+                                                                  <http://dbpedia.org/resource/Mont-Saint-Michel> ,
+                                                                  :Place_CaerCadarn ;
+                     :depicts_event <http://dg1an3.github.io/ontology/books#Birth_of_Mordred> ,
                                     :Death_of_Owain ,
                                     :Fight_Arthur_vs_Owain ;
                      :has_character <http://dbpedia.org/resource/Culhwch> ,
@@ -1271,7 +1329,7 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Novel_TheWormOuroboros
 :Novel_TheWormOuroboros rdf:type owl:NamedIndividual ,
                                  :Novel ;
-                        <http://purl.obolibrary.org/obo/IAO_0000142> :Place_Demonland ,
+                        <http://purl.obolibrary.org/obo/IAO_0000142> <http://dg1an3.github.io/ontology/books#Place_Demonland> ,
                                                                      :Place_Witchland ;
                         :depicts_event :Fight_Gorice_vs_GoldryBluszco ,
                                        :Trip_AssaultOnCarce ,
@@ -1369,12 +1427,6 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                       <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/William_Gibson"^^xsd:anyURI .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_AlamanceCreekNC
-:Place_AlamanceCreekNC rdf:type owl:NamedIndividual ,
-                                <http://purl.obolibrary.org/obo/BFO_0000009> ;
-                       <http://purl.obolibrary.org/obo/BFO_0000050> :Place_NorthCarolina .
-
-
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Armorica
 :Place_Armorica rdf:type owl:NamedIndividual ,
                          <http://purl.obolibrary.org/obo/BFO_0000009> ;
@@ -1388,12 +1440,6 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                         <http://purl.obolibrary.org/obo/BFO_0000050> :Place_Northumbria .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_BritishIsles
-:Place_BritishIsles rdf:type owl:NamedIndividual ,
-                             <http://purl.obolibrary.org/obo/BFO_0000009> ;
-                    <http://purl.obolibrary.org/obo/BFO_0000050> :Place_WesternEurope .
-
-
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Brittany
 :Place_Brittany rdf:type owl:NamedIndividual ,
                          <http://purl.obolibrary.org/obo/BFO_0000009> ;
@@ -1403,7 +1449,7 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_CaerCadarn
 :Place_CaerCadarn rdf:type owl:NamedIndividual ;
-                  <http://purl.obolibrary.org/obo/BFO_0000050> :Place_Dumnonia ;
+                  <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Dumnonia> ;
                   <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/Cadbury_Castle,_Somerset"^^xsd:anyURI .
 
 
@@ -1411,12 +1457,6 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 :Place_Carce rdf:type owl:NamedIndividual ,
                       :fictional_geographic_place ;
              <http://purl.obolibrary.org/obo/BFO_0000050> :Place_Witchland .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_CaribbeanSea
-:Place_CaribbeanSea rdf:type owl:NamedIndividual ,
-                             <http://purl.obolibrary.org/obo/BFO_0000009> ;
-                    <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/Caribbean_Sea"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_CastleLeoch
@@ -1438,19 +1478,6 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                     <http://purl.obolibrary.org/obo/BFO_0000050> :Place_ScottishHighlands .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Demonland
-:Place_Demonland rdf:type owl:NamedIndividual ,
-                          :fictional_geographic_place ;
-                 <http://purl.obolibrary.org/obo/BFO_0000050> :Place_Mercury_in_the_Worm_Ouroboros .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Dumnonia
-:Place_Dumnonia rdf:type owl:NamedIndividual ,
-                         <http://purl.obolibrary.org/obo/BFO_0000009> ;
-                <http://purl.obolibrary.org/obo/BFO_0000050> :Place_BritishIsles ;
-                rdfs:comment "https://en.wikipedia.org/wiki/Dumnonia"^^xsd:anyURI .
-
-
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_FoliotIsles
 :Place_FoliotIsles rdf:type owl:NamedIndividual ,
                             :fictional_geographic_place ;
@@ -1467,7 +1494,7 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_FrasersRidge
 :Place_FrasersRidge rdf:type owl:NamedIndividual ,
                              :fictional_geographic_place ;
-                    <http://purl.obolibrary.org/obo/BFO_0000050> :Place_NorthCarolina .
+                    <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/North_Carolina> .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Goblinland
@@ -1480,7 +1507,7 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_HillsboroughNC
 :Place_HillsboroughNC rdf:type owl:NamedIndividual ,
                                <http://purl.obolibrary.org/obo/BFO_0000009> ;
-                      <http://purl.obolibrary.org/obo/BFO_0000050> :Place_NorthCarolina .
+                      <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/North_Carolina> .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Inverness
@@ -1492,21 +1519,15 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_IsleOfTheDead
 :Place_IsleOfTheDead rdf:type owl:NamedIndividual ,
                               :fictional_geographic_place ;
-                     <http://purl.obolibrary.org/obo/BFO_0000050> :Place_Dumnonia ;
+                     <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/Dumnonia> ;
                      <http://purl.org/dc/elements/1.1/date> "0450-01-01T00:00:00"^^xsd:dateTime ;
                      <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/Portland_Bill"^^xsd:anyURI .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Jamaica
-:Place_Jamaica rdf:type owl:NamedIndividual ,
-                        <http://purl.obolibrary.org/obo/BFO_0000009> ;
-               <http://purl.obolibrary.org/obo/BFO_0000050> :Place_CaribbeanSea .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Kernow
 :Place_Kernow rdf:type owl:NamedIndividual ,
                        <http://purl.obolibrary.org/obo/BFO_0000009> ;
-              <http://purl.obolibrary.org/obo/BFO_0000050> :Place_BritishIsles .
+              <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/British_Isles> .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Lollybrook
@@ -1530,16 +1551,10 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                           :fictional_geographic_place .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_NorthCarolina
-:Place_NorthCarolina rdf:type owl:NamedIndividual ,
-                              :fictional_geographic_place ;
-                     rdfs:comment "as in Outlander"^^xsd:anyURI .
-
-
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Northumbria
 :Place_Northumbria rdf:type owl:NamedIndividual ,
                             <http://purl.obolibrary.org/obo/BFO_0000009> ;
-                   <http://purl.obolibrary.org/obo/BFO_0000050> :Place_BritishIsles .
+                   <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/British_Isles> .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Paris
@@ -1549,18 +1564,13 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_RiverRun
 :Place_RiverRun rdf:type owl:NamedIndividual ,
                          <http://purl.obolibrary.org/obo/BFO_0000009> ;
-                <http://purl.obolibrary.org/obo/BFO_0000050> :Place_NorthCarolina .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_RoseHall
-:Place_RoseHall rdf:type owl:NamedIndividual ;
-                <http://purl.obolibrary.org/obo/BFO_0000050> :Place_Jamaica .
+                <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/North_Carolina> .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_ScottishHighlands
 :Place_ScottishHighlands rdf:type owl:NamedIndividual ,
                                   <http://purl.obolibrary.org/obo/BFO_0000009> ;
-                         <http://purl.obolibrary.org/obo/BFO_0000050> :Place_BritishIsles ;
+                         <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/British_Isles> ;
                          <http://purl.org/dc/elements/1.1/description> "https://en.wikipedia.org/wiki/Scottish_Highlands"^^xsd:anyURI .
 
 
@@ -1590,7 +1600,7 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Wessex
 :Place_Wessex rdf:type owl:NamedIndividual ,
                        <http://purl.obolibrary.org/obo/BFO_0000009> ;
-              <http://purl.obolibrary.org/obo/BFO_0000050> :Place_BritishIsles ;
+              <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/British_Isles> ;
               <http://purl.obolibrary.org/obo/BFO_0000051> :Place_Winchester ;
               <http://purl.org/dc/elements/1.1/date> "0898-01-01T00:00:00"^^xsd:dateTime .
 
@@ -1608,7 +1618,7 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_WilmingtonNC
 :Place_WilmingtonNC rdf:type owl:NamedIndividual ,
                              <http://purl.obolibrary.org/obo/BFO_0000009> ;
-                    <http://purl.obolibrary.org/obo/BFO_0000050> :Place_NorthCarolina .
+                    <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/North_Carolina> .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Winchester
@@ -1620,21 +1630,6 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 :Place_Witchland rdf:type owl:NamedIndividual ,
                           :fictional_geographic_place ;
                  <http://purl.obolibrary.org/obo/BFO_0000050> :Place_Mercury_in_the_Worm_Ouroboros .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Ynys_Mor
-:Place_Ynys_Mor rdf:type owl:NamedIndividual ;
-                <http://purl.obolibrary.org/obo/BFO_0000050> :Place_BritishIsles .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Ynys_Trebes
-:Place_Ynys_Trebes rdf:type owl:NamedIndividual ,
-                            :fictional_geographic_place .
-
-
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Place_Ynys_Wydryn
-:Place_Ynys_Wydryn rdf:type owl:NamedIndividual ;
-                   <http://purl.obolibrary.org/obo/BFO_0000050> :Place_BritishIsles .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Play_A_Midsummer_Nights_Dream
@@ -1709,7 +1704,7 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 :Trip_Brianna_NC rdf:type owl:NamedIndividual ,
                           :journey_or_trip ;
                  <http://purl.obolibrary.org/obo/RO_0000057> :Character_BriannaRandall ;
-                 :occurs_at :Place_NorthCarolina .
+                 :occurs_at <http://dbpedia.org/resource/North_Carolina> .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Trip_Claire_Craigh_na_Dun
@@ -1752,7 +1747,7 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
                                :journey_or_trip ;
                       <http://purl.obolibrary.org/obo/RO_0000057> :Character_ClaireFraser ,
                                                                   :Character_JamieFraser ;
-                      :occurs_at :Place_NorthCarolina .
+                      :occurs_at <http://dbpedia.org/resource/North_Carolina> .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Trip_Claire_Jamie_Paris
@@ -1796,14 +1791,14 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Trip_Geillis_Jamaica
 :Trip_Geillis_Jamaica rdf:type owl:NamedIndividual ,
                                :journey_or_trip ;
-                      <http://purl.obolibrary.org/obo/BFO_0000066> :Place_Jamaica ;
+                      <http://purl.obolibrary.org/obo/BFO_0000066> <http://dbpedia.org/resource/Jamaica> ;
                       <http://purl.obolibrary.org/obo/RO_0000057> :Character_Geillis ;
                       rdfs:comment "is_implied"^^xsd:anyURI .
 
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Trip_Roger_NC
 :Trip_Roger_NC rdf:type owl:NamedIndividual ;
-               :occurs_at :Place_NorthCarolina ;
+               :occurs_at <http://dbpedia.org/resource/North_Carolina> ;
                rdfs:comment "to follow Brianna" .
 
 
@@ -1853,6 +1848,11 @@ They arrive at a round \"air island\", which ends up being the Moon.  Horse-vult
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Wedding_Claire_Jamie
 :Wedding_Claire_Jamie rdf:type owl:NamedIndividual .
+
+
+###  https://dbpedia.org/resource/Glastonbury_Tor
+<https://dbpedia.org/resource/Glastonbury_Tor> rdf:type owl:NamedIndividual ;
+                                               <http://purl.obolibrary.org/obo/BFO_0000050> <http://dbpedia.org/resource/British_Isles> .
 
 
 ###  https://en.wikipedia.org/wiki/Doctor_Who
