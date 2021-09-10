@@ -1177,6 +1177,14 @@ dbr:Ælle_of_Sussex rdf:type owl:NamedIndividual .
                                                   rdfs:comment "originally from ../uslander/ontologies/2015/6/dgl-history" .
 
 
+###  http://dbpedia.org/resource/Lovecraft_Country_(novel)
+<http://dbpedia.org/resource/Lovecraft_Country_(novel)> rdf:type owl:NamedIndividual ,
+                                                                 dbo:Novel ;
+                                                        dc:creator <http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Person_MattRuff> ;
+                                                        dc:date "2016-04-01T00:00:00"^^xsd:dateTime ;
+                                                        dc:description "https://en.wikipedia.org/wiki/Lovecraft_Country_(novel)"^^xsd:anyURI .
+
+
 ###  http://dbpedia.org/resource/Merlin_(wizard)
 <http://dbpedia.org/resource/Merlin_(wizard)> rdf:type owl:NamedIndividual ,
                                                        :FictionalCharacter ;
@@ -1847,14 +1855,6 @@ Pattern Recognition"""^^xsd:string ,
                                                                                                                dc:creator <http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Person_BernardCornwell> .
 
 
-###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Novel_LovecraftCountry
-<http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Novel_LovecraftCountry> rdf:type owl:NamedIndividual ,
-                                                                                                                 dbo:Novel ;
-                                                                                                        dc:creator <http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Person_MattRuff> ;
-                                                                                                        dc:date "2016-04-01T00:00:00"^^xsd:dateTime ;
-                                                                                                        dc:description "https://en.wikipedia.org/wiki/Lovecraft_Country_(novel)"^^xsd:anyURI .
-
-
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Novel_MethuselahsChildren
 <http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Novel_MethuselahsChildren> rdf:type owl:NamedIndividual ,
                                                                                                                     dbo:Novel ;
@@ -2460,6 +2460,15 @@ Pattern Recognition"""^^xsd:string ,
 
 ###  http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Wedding_Claire_Jamie
 <http://www.semanticweb.org/uslander/ontologies/2021/6/speculative_fiction_onto#Wedding_Claire_Jamie> rdf:type owl:NamedIndividual .
+
+
+###  https://en.wikibooks.org/wiki/Programming_Mac_OS_X_with_Cocoa_for_Beginners
+<https://en.wikibooks.org/wiki/Programming_Mac_OS_X_with_Cocoa_for_Beginners> rdf:type owl:NamedIndividual ;
+                                                                              rdfs:comment """Hello World using a custom view
+Hello World with parameters
+Hello World slider
+
+WikiDraw""" .
 
 
 ###  https://en.wikipedia.org/wiki/The_Power_of_Myth
