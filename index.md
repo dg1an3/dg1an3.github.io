@@ -19,9 +19,9 @@ All posts (imported from [dg1an3](http://www.dg1an3.net)) live under [/blog/](/b
 - DeepNeuro
 
 ## Other Posts
-- [LC-VAE and the generalized shifter](/blog/lc-vae-generalized-shifter)
-- [Mutation testing](/blog/mutation-testing)
-- [RT physician intent](/blog/rt-physician-intent)
+- [LC-VAE and the generalized shifter](/blog/2019-10-07-lc-vae-generalized-shifter)
+- [Mutation testing](/blog/2019-10-07-mutation-testing)
+- [RT physician intent](/blog/2019-02-22-rt-physician-intent)
 
 * ipfs//gnarls
 * blogger rubbernecking

@@ -18,14 +18,3 @@ Imported from [dg1an3](http://www.dg1an3.net) — {{ site.time | date: "%Y" }}.
   {% endif %}
 {% endfor %}
 </ul>
-
-## Undated notes
-
-<ul>
-{% assign notes = site.pages | sort: "title" %}
-{% for p in notes %}
-  {% if p.dir == "/blog/" and p.date == nil and p.name != "index.md" %}
-  <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
