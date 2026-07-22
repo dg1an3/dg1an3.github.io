@@ -8,16 +8,20 @@
 - WarpTPS
 - ALGT
 
+## Blog
+
+All posts (imported from [dg1an3](http://www.dg1an3.net)) live under [/blog/](/blog/).
+
 ## Posts about C-MIMI 2019
-- [DeepCAT](https://dg1an3.github.io/cmimi2019-worklist-triage)
-- [Federated learning]() - [pt 2]() - [pt 3]()
-- [Explainable AI](https://dg1an3.github.io/cmimi2019-explainable-AI)
+- [DeepCAT](/blog/2019-11-18-cmimi2019-worklist-triage)
+- [Federated learning](/blog/2019-11-14-cmimi2019-federated-learning) - [pt 2](/blog/2019-11-15-cmimi2019-federated-learning-pt2) - [pt 3](/blog/2019-11-16-cmimi2019-federated-learning-pt3)
+- [Explainable AI](/blog/2019-11-17-cmimi2019-explainable-ai)
 - DeepNeuro
 
 ## Other Posts
-- LC-VAE and the generalized shifter
-- Mutation testing
-- RT physician intent
+- [LC-VAE and the generalized shifter](/blog/2019-10-07-lc-vae-generalized-shifter)
+- [Mutation testing](/blog/2019-10-07-mutation-testing)
+- [RT physician intent](/blog/2019-02-22-rt-physician-intent)
 
 * ipfs//gnarls
 * blogger rubbernecking
