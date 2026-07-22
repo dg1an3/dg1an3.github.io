@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Architecture and OSS"
+date: 2022-06-17
 ---
 
 Ossarch snnort
